@@ -125,9 +125,9 @@ const Header = ()=>{
                         className: "flex items-center gap-4",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "size-11 border border-stone-200 rounded-full inline-flex items-center justify-center ",
+                                className: "size-11 border border-stone-800 rounded-full inline-flex items-center justify-center ",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "text-stone-200",
+                                    className: "text-stone-800",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                                         width: "24",
                                         height: "24",
@@ -585,12 +585,12 @@ const Projects = ()=>{
                     className: "mt-10 md:mt-16 lg:mt-20",
                     children: projects.map(({ name, image })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                             href: "#",
-                            className: "border-t last:border-b border-stone-400 border-dotted py-6 md:py-8 lg:py-10 flex flex-col",
+                            className: "flex flex-col border-t last:border-b border-stone-400 border-dotted py-6 md:py-8 lg:py-10 ",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "aspect-video md:hidden",
+                                        className: "md:hidden aspect-video",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                             src: image,
                                             alt: `${name} image`,
@@ -613,7 +613,7 @@ const Projects = ()=>{
                                                 children: name
                                             }, void 0, false, {
                                                 fileName: "[project]/src/sections/Projects.tsx",
-                                                lineNumber: 55,
+                                                lineNumber: 56,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -629,18 +629,18 @@ const Projects = ()=>{
                                                     d: "m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/sections/Projects.tsx",
-                                                    lineNumber: 64,
+                                                    lineNumber: 65,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/sections/Projects.tsx",
-                                                lineNumber: 56,
+                                                lineNumber: 57,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/sections/Projects.tsx",
-                                        lineNumber: 54,
+                                        lineNumber: 55,
                                         columnNumber: 17
                                     }, this)
                                 ]
