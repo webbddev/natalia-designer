@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/components/Button";
-import { FC, useEffect, useState } from "react";
+import { FC, MouseEvent, useEffect, useState } from "react";
 import { motion, useAnimate } from "motion/react";
 
 /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
@@ -145,6 +145,9 @@ const Header: FC = () => {
               href={href}
               key={label}
               className="text-stone-200 border-t last:border-b border-stone-800 py-8 group/nav-item relative isolate"
+              onClick={() => {
+                setIsOpen(false);
+              }}
             >
               <div className="container !max-w-full flex items-center justify-between">
                 <span className="text-3xl group-hover/nav-item:pl-4 transition-all duration-500">
@@ -154,7 +157,7 @@ const Header: FC = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
                   className="size-6"
                 >

@@ -11,7 +11,7 @@ const navItems = [
 
 const Footer: FC = () => {
   return (
-    <footer className="bg-stone-900 text-white py-16">
+    <footer className="bg-stone-900 text-white py-16" id="contact">
       <div className="container">
         <div className="section">
           {/* Availability / green dot indicator */}
