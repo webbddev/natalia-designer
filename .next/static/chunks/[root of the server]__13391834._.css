@@ -438,6 +438,10 @@ img, video {
   z-index: -10;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }

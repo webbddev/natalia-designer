@@ -136,7 +136,7 @@ const Header: FC = () => {
     <header>
       {/* Full-screen navigation overlay */}
       <div
-        className="fixed top-0 left-0 w-full h-0 overflow-hidden bg-stone-900"
+        className="fixed top-0 left-0 w-full h-0 overflow-hidden bg-stone-900 z-10"
         ref={navScope}
       >
         <nav className="mt-20 flex flex-col ">
@@ -175,7 +175,7 @@ const Header: FC = () => {
       </div>
 
       {/* Fixed header with logo - uses mix-blend-difference for contrast against any background */}
-      <div className="fixed top-0 left-0 w-full mix-blend-difference backdrop-blur-md">
+      <div className="fixed top-0 left-0 w-full mix-blend-difference backdrop-blur-md z-10">
         <div className="container !max-w-full">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
@@ -191,7 +191,7 @@ const Header: FC = () => {
       </div>
 
       {/* Navigation controls container */}
-      <div className="fixed top-0 left-0 w-full">
+      <div className="fixed top-0 left-0 w-full z-10">
         <div className="container !max-w-full">
           <div className="flex justify-end items-center h-20">
             {/* Navigation toggle button */}
