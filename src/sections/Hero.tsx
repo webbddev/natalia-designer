@@ -1,16 +1,24 @@
 "use client";
 
-import { FC, useEffect } from "react";
+import { FC, useEffect, useRef } from "react";
 import heroImage from "@/assets/images/hero-image.jpg";
 import aboutMeImage from "@/assets/images/aboutMe.jpg";
 import Image from "next/image";
 import Button from "@/components/Button";
 import SplitType from "split-type";
-import { useAnimate, motion } from "motion/react";
+import { useAnimate, motion, useScroll, useTransform } from "motion/react";
 import { stagger } from "motion";
 
 const Hero: FC = () => {
   const [titleScope, titleAnimate] = useAnimate();
+  const scrollingDiv = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: scrollingDiv,
+    offset: ["start end", "end end"],
+  });
+
+  const portraitWidth = useTransform(scrollYProgress, [0, 1], ["100%", "240%"]);
 
   useEffect(() => {
     new SplitType(titleScope.current, {
@@ -29,7 +37,7 @@ const Hero: FC = () => {
 
   return (
     <section>
-      <div className="grid md:grid-cols-12 md:h-screen items-stretch">
+      <div className="grid md:grid-cols-12 md:h-screen items-stretch sticky  top-0">
         {/* Left Side Content on md: */}
         <div className="md:col-span-7 flex flex-col justify-center">
           <div className="container max-w-full 2xl:max-w-[1030px]">
@@ -51,20 +59,38 @@ const Hero: FC = () => {
                 <Button
                   variant="secondary"
                   iconAfter={
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      className="size-5"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
-                      />
-                    </svg>
+                    <div className="overflow-hidden size-5">
+                      <div className="h-5 w-10 flex group-hover/button:-translate-x-1/2 transition-transform duration-500">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth="1.5"
+                          stroke="currentColor"
+                          className="size-5"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth="1.5"
+                          stroke="currentColor"
+                          className="size-5"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
                   }
                 >
                   <span>View My Work</span>
@@ -81,8 +107,11 @@ const Hero: FC = () => {
           </div>
         </div>
         {/* Right Side Content on md: */}
-        <div className="md:col-span-5">
-          <div className="mt-20 md:mt-0 md:h-full">
+        <div className="md:col-span-5 relative">
+          <motion.div
+            className="mt-20 md:mt-0 md:size-full md:absolute md:right-0 max-md:!w-full"
+            style={{ width: portraitWidth }}
+          >
             <Image
               src={aboutMeImage}
               // src={heroImage}
@@ -90,9 +119,13 @@ const Hero: FC = () => {
               className="h-[550px] md:h-screen md:w-full object-cover"
               alt="My Portrait"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
+      <div
+        className="md:h-[200vh]"
+        ref={scrollingDiv}
+      ></div>
     </section>
   );
 };

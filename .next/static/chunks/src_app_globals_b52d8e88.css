@@ -359,6 +359,10 @@ img, video {
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .bottom-0 {
   bottom: 0;
 }
@@ -492,8 +496,20 @@ img, video {
   height: auto;
 }
 
+.h-5 {
+  height: 1.25rem;
+}
+
+.h-\[200vh\] {
+  height: 200vh;
+}
+
 .w-full {
   width: 100%;
+}
+
+.w-10 {
+  width: 2.5rem;
 }
 
 .\!max-w-full {
@@ -592,6 +608,10 @@ img, video {
   border-width: 2px;
 }
 
+.border-4 {
+  border-width: 4px;
+}
+
 .border-t {
   border-top-width: 1px;
 }
@@ -616,6 +636,11 @@ img, video {
 
 .border-transparent {
   border-color: #0000;
+}
+
+.border-red-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity, 1));
 }
 
 .border-x-stone-400 {
@@ -787,6 +812,12 @@ img, video {
   transition-duration: .15s;
 }
 
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  transition-duration: .15s;
+}
+
 .duration-500 {
   transition-duration: .5s;
 }
@@ -887,11 +918,35 @@ html {
   height: 100%;
 }
 
+.group\/button:hover .group-hover\/button\:translate-x-1\/2 {
+  --tw-translate-x: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group\/button:hover .group-hover\/button\:-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .group\/nav-item:hover .group-hover\/nav-item\:pl-4 {
   padding-left: 1rem;
 }
 
+@media not all and (width >= 768px) {
+  .max-md\:\!w-full {
+    width: 100% !important;
+  }
+}
+
 @media (width >= 768px) {
+  .md\:absolute {
+    position: absolute;
+  }
+
+  .md\:right-0 {
+    right: 0;
+  }
+
   .md\:col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -936,12 +991,21 @@ html {
     aspect-ratio: 9 / 16;
   }
 
+  .md\:size-full {
+    width: 100%;
+    height: 100%;
+  }
+
   .md\:h-full {
     height: 100%;
   }
 
   .md\:h-screen {
     height: 100vh;
+  }
+
+  .md\:h-\[200vh\] {
+    height: 200vh;
   }
 
   .md\:w-full {
