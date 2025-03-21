@@ -36,7 +36,7 @@ const Hero: FC = () => {
   }, []);
 
   return (
-    <section>
+    <section id="hero">
       <div className="grid md:grid-cols-12 md:h-screen items-stretch sticky  top-0">
         {/* Left Side Content on md: */}
         <div className="md:col-span-7 flex flex-col justify-center">
@@ -58,6 +58,7 @@ const Hero: FC = () => {
               >
                 <Button
                   variant="secondary"
+                  href="#projects"
                   iconAfter={
                     <div className="overflow-hidden size-5">
                       <div className="h-5 w-10 flex group-hover/button:-translate-x-1/2 transition-transform duration-500">
@@ -101,7 +102,7 @@ const Hero: FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 2.2 }}
               >
-                <Button variant="text">Let&apos;s Talk</Button>
+                <Button variant="text" href="#contact">Let&apos;s Talk</Button>
               </motion.div>
             </div>
           </div>
@@ -122,10 +123,7 @@ const Hero: FC = () => {
           </motion.div>
         </div>
       </div>
-      <div
-        className="md:h-[200vh]"
-        ref={scrollingDiv}
-      ></div>
+      <div className="md:h-[200vh]" ref={scrollingDiv}></div>
     </section>
   );
 };

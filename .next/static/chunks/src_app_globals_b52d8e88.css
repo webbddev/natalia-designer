@@ -1081,6 +1081,18 @@ html {
     height: 100vh;
   }
 
+  .md\:h-\[100vh\] {
+    height: 100vh;
+  }
+
+  .md\:h-\[50vh\] {
+    height: 50vh;
+  }
+
+  .md\:h-\[500vh\] {
+    height: 500vh;
+  }
+
   .md\:w-full {
     width: 100%;
   }

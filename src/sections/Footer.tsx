@@ -2,11 +2,11 @@ import Button from "@/components/Button";
 import { FC } from "react";
 
 const navItems = [
-  { href: "#", label: "Home" },
-  { href: "#", label: "Projects" },
-  { href: "#", label: "Testimonials" },
-  { href: "#", label: "Faqs" },
-  { href: "#", label: "Contact" },
+  { href: "#hero", label: "Home" },
+  { href: "#projects", label: "Projects" },
+  { href: "#testimonials", label: "Testimonials" },
+  { href: "#faqs", label: "Faqs" },
+  { href: "#contact", label: "Contact" },
 ];
 
 const Footer: FC = () => {
@@ -32,6 +32,7 @@ const Footer: FC = () => {
               <Button
                 variant="secondary"
                 className="mt-8 px-3"
+                href="mailto:alevtina.gordienko@gmail.com"
                 iconAfter={
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -57,11 +58,14 @@ const Footer: FC = () => {
             <div className="md:col-span-1">
               <nav className="flex flex-col md:items-end gap-8 mt-16 md:mt-0">
                 {navItems.map(({ href, label }) => (
-                  <a key={label} href={href}>
-                    <Button variant="text" className="text-lg">
-                      {label}
-                    </Button>
-                  </a>
+                  <Button
+                    key={label}
+                    href={href}
+                    variant="text"
+                    className="text-lg"
+                  >
+                    {label}
+                  </Button>
                 ))}
               </nav>
             </div>
