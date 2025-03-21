@@ -571,6 +571,10 @@ img, video {
   height: 1.5rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -761,6 +765,18 @@ img, video {
 .bg-stone-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(214 211 209 / var(--tw-bg-opacity, 1));
+}
+
+.bg-stone-900\/30 {
+  background-color: #1c19174d;
+}
+
+.bg-stone-900\/60 {
+  background-color: #1c191799;
+}
+
+.bg-stone-900\/80 {
+  background-color: #1c1917cc;
 }
 
 .object-cover {
@@ -1004,6 +1020,10 @@ html {
 
 .last\:border-b:last-child {
   border-bottom-width: 1px;
+}
+
+.hover\:border-red-orange-500:hover {
+  border-color: #f45c2d;
 }
 
 .hover\:bg-red-orange-500:hover {

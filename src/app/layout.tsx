@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/sections";
 
 const archivo = Archivo({
   display: "swap",
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${archivo.variable} font-sans antialiased bg-stone-200 text-stone-900 h-[3000px]`}>
+        {/* <Header/> */}
         {children}
       </body>
     </html>
