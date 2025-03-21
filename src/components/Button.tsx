@@ -1,7 +1,6 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
-// Define the ButtonProps type separately
 type ButtonProps = {
   variant: "primary" | "secondary" | "text";
   iconAfter?: ReactNode;

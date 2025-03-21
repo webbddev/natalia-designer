@@ -1,5 +1,4 @@
-import { Footer, Header, Hero, Intro, Projects, Testimonials } from "@/sections";
-import FAQs from "@/sections/FAQs";
+import { FAQs, Footer, Header, Hero, Intro, Projects, Testimonials } from "@/sections";
 
 
 export default function Home() {

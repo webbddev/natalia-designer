@@ -13,11 +13,9 @@ type TestimonialProps = {
   imagePositionY: number;
   image: string | StaticImport;
   className?: string;
-};
+} & HTMLAttributes<HTMLDivElement>;
 
-const Testimonial = (
-  props: TestimonialProps & HTMLAttributes<HTMLDivElement>
-) => {
+const Testimonial = (props: TestimonialProps) => {
   const {
     quote,
     name,
@@ -28,9 +26,6 @@ const Testimonial = (
     className,
     ...rest
   } = props;
-
-  // const [quoteScope, quoAnimate] = useAnimate();
-  // const [citeScope, citeAnimate] = useAnimate();
 
   // custom animation hook
   const {

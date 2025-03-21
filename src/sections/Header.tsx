@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/components/Button";
-import { FC, MouseEvent, useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { motion, useAnimate } from "motion/react";
 
 /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
@@ -40,38 +40,48 @@ const Header: FC = () => {
     if (isOpen) {
       // When menu opens:
       // 1. Transform top line to form X (first move down, then rotate)
-      topLineAnimate([
+      topLineAnimate(
         [
-          topLineScope.current,
-          {
-            translateY: 4,
-          },
+          [
+            topLineScope.current,
+            {
+              translateY: 4,
+            },
+          ],
+          [
+            topLineScope.current,
+            {
+              rotate: 45,
+            },
+          ],
         ],
-        [
-          topLineScope.current,
-          {
-            rotate: 45,
-          },
-        ],
-      ]);
+        {
+          duration: .5, // Duration in seconds
+        }
+      );
 
       // 2. Transform bottom line to form X (first move up, then rotate)
-      bottomLineAnimate([
+      bottomLineAnimate(
         [
-          bottomLineScope.current,
-          {
-            translateY: -4,
-          },
+          [
+            bottomLineScope.current,
+            {
+              translateY: -4,
+            },
+          ],
+          [
+            bottomLineScope.current,
+            {
+              rotate: -45,
+            },
+          ],
         ],
-        [
-          bottomLineScope.current,
-          {
-            rotate: -45,
-          },
-        ],
-      ]);
+        {
+          duration: .5, // Duration in seconds
+        }
+      );
 
-      // 3. navAnimate fn to animate navigation menu to expand to full height
+      // 3. navAnimate fn to animate navigation menu expansion to full height
       // with a slower duration for a smooth opening effect
       navAnimate(
         navScope.current, // Target element (nav container)
@@ -85,38 +95,48 @@ const Header: FC = () => {
       // 1. First rotate back to 0 degrees
       // 2. Then move back to original Y position
       // Order matters to create a smooth transition
-      topLineAnimate([
+      topLineAnimate(
         [
-          topLineScope.current,
-          {
-            rotate: 0,
-          },
+          [
+            topLineScope.current,
+            {
+              rotate: 0,
+            },
+          ],
+          [
+            topLineScope.current,
+            {
+              translateY: 0,
+            },
+          ],
         ],
-        [
-          topLineScope.current,
-          {
-            translateY: 0,
-          },
-        ],
-      ]);
+        {
+          duration: .5, // Duration in seconds
+        }
+      );
 
       // Reset bottom hamburger line:
       // 1. First rotate back to 0 degrees
       // 2. Then move back to original Y position
-      bottomLineAnimate([
+      bottomLineAnimate(
         [
-          bottomLineScope.current,
-          {
-            rotate: 0,
-          },
+          [
+            bottomLineScope.current,
+            {
+              rotate: 0,
+            },
+          ],
+          [
+            bottomLineScope.current,
+            {
+              translateY: 0,
+            },
+          ],
         ],
-        [
-          bottomLineScope.current,
-          {
-            translateY: 0,
-          },
-        ],
-      ]);
+        {
+          duration: .5, // Duration in seconds
+        }
+      );
 
       // Animate navigation menu to collapse
       // with a faster duration for a snappier closing effect

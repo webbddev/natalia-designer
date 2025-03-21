@@ -45,7 +45,14 @@ const Projects: FC = () => {
             >
               <div className="absolute rounded-md bottom-0 left-0 w-full h-0 group-hover/project:h-full transition-all duration-500 bg-stone-300"></div>
               <div className="relative">
-                <div className="md:hidden aspect-video"></div>
+                <div className="md:hidden aspect-video">
+                  {" "}
+                  <Image
+                    src={image}
+                    alt={`${name} image`}
+                    className="size-full object-cover"
+                  />
+                </div>
                 {/*  */}
                 <div className="mt-8 px-6 md:mt-0 flex justify-between items-center md:grid md:[grid-template-columns:1fr_300px_max-content] md:gap-8">
                   <div className="lg:group-hover/project:pl-8 transition-all duration-700">
