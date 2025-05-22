@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { ButtonHTMLAttributes, ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
@@ -55,7 +55,7 @@ const Button = (props: ButtonProps) => {
 
 export default Button;
 
-
+// ORIGINAL Button component
 // import { ButtonHTMLAttributes, ReactNode } from "react";
 // import { twMerge } from "tailwind-merge";
 

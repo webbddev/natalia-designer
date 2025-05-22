@@ -5,6 +5,9 @@
     ],
     "[project]/src/app/_not-found/page": [
       "static/media/k3kPo8UDI_1M0wlSV9XAw6lQkqWY8Q82sLydOxKsv4Rn-s.p.3ef2f81b.woff2"
+    ],
+    "[project]/src/app/projects/[slug]/page": [
+      "static/media/k3kPo8UDI_1M0wlSV9XAw6lQkqWY8Q82sLydOxKsv4Rn-s.p.3ef2f81b.woff2"
     ]
   },
   "appUsingSizeAdjust": true,

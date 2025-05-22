@@ -1,0 +1,41 @@
+# Node modules (already installed in the container)
+node_modules/
+
+# Version control
+.git/
+.gitignore
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor and IDE files
+*.swp
+.vscode/
+.idea/
+
+# Environment variables
+**/.env*   
+*.env
+.env*
+!.env.example
+
+# Documentation
+README.md
+CHANGELOG.md
+LICENSE
+
+# Docker files
+Dockerfile
+.dockerignore
+
+# Test files
+__tests__/
+*.test.js
+*.spec.js
+
+# Temporary files
+*.log
+*.tmp
+*.bak
+*.old
