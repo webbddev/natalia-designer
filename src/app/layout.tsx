@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${archivo.variable} font-sans antialiased bg-stone-200 text-stone-900 h-[3000px]`}>
-        {/* <Header/> */}
+        <Header/>
         {children}
       </body>
     </html>

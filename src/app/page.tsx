@@ -4,7 +4,7 @@ import { FAQs, Footer, Header, Hero, Intro, Projects, Testimonials } from "@/sec
 export default function Home() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Hero/>
       <Intro/>
       <Projects/>
