@@ -184,16 +184,17 @@ import ProjectGallery from "@/components/Gallery";
 import Link from "next/link";
 import Button from "@/components/Button";
 
-interface ProjectDetailPageProps {
-  params: { slug: string };
-}
 
 export default async function ProjectDetailPage({
   params,
-}: ProjectDetailPageProps) {
+}: {
+  params: { slug: string };
+}) {
   const project = await getProjectBySlug(params.slug);
 
-  if (!project) return notFound();
+  if (!project) {
+    return notFound();
+  }
 
   return (
     <main className="container py-16">
