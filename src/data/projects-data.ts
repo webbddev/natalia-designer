@@ -123,10 +123,13 @@ export const projectsData = [
 ];
 
 // Helper functions
-export const getProjectBySlug = (slug) => {
+// export const getProjectBySlug = (slug) => {
+//   return projectsData.find((project) => project.slug === slug);
+// };
+
+export const getProjectBySlug = async (slug: string) => {
   return projectsData.find((project) => project.slug === slug);
 };
-
-export const getAllProjectSlugs = () => {
+export const getAllProjectSlugs = async () => {
   return projectsData.map((project) => project.slug);
 };
