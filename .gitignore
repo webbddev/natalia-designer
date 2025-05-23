@@ -13,7 +13,7 @@ lib/
 
 # React ignore
 build/
-public/
+# public/
 
 # Tailwind CSS ignore
 tailwind.config.js

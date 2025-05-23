@@ -102,52 +102,50 @@ const Hero: FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 1.75 }}
               >
-                <a>
-                  <Button
-                    variant="primary"
-                    href="/Byhalova Natalia - CV.pdf"
-                    className="hover:bg-red-orange-300"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    download
-                    iconAfter={
-                      <div className="overflow-hidden size-5">
-                        <div className="h-5 w-10 flex group-hover/button:-translate-x-1/2 transition-transform duration-500">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            className="size-5"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M3 16.5h3c.83 0 1.5-.67 1.5-1.5V6c0-2.48 1.51-4.5 3.5-4.5s3.5 2.02 3.5 4.5v9c0 .83.67 1.5 1.5 1.5h3c.83 0 1.5-.67 1.5-1.5V6.71c0-2.58 2.17-4.71 4.71-4.71h3c2.58 0 4.71 2.13 4.71 4.71v9c0 .83.67 1.5 1.5 1.5z"
-                            />
-                          </svg>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            className="size-5"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M3 16.5h3c.83 0 1.5-.67 1.5-1.5V6c0-2.48 1.51-4.5 3.5-4.5s3.5 2.02 3.5 4.5v9c0 .83.67 1.5 1.5 1.5h3c.83 0 1.5-.67 1.5-1.5V6.71c0-2.58 2.17-4.71 4.71-4.71h3c2.58 0 4.71 2.13 4.71 4.71v9c0 .83.67 1.5 1.5 1.5z"
-                            />
-                          </svg>
-                        </div>
+                <Button
+                  variant="primary"
+                  href="/Byhalova Natalia - CV.pdf"
+                  className="hover:bg-red-orange-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                  iconAfter={
+                    <div className="overflow-hidden size-5">
+                      <div className="h-5 w-10 flex group-hover/button:-translate-x-1/2 transition-transform duration-500">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth="1.5"
+                          stroke="currentColor"
+                          className="size-5"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M3 16.5h3c.83 0 1.5-.67 1.5-1.5V6c0-2.48 1.51-4.5 3.5-4.5s3.5 2.02 3.5 4.5v9c0 .83.67 1.5 1.5 1.5h3c.83 0 1.5-.67 1.5-1.5V6.71c0-2.58 2.17-4.71 4.71-4.71h3c2.58 0 4.71 2.13 4.71 4.71v9c0 .83.67 1.5 1.5 1.5z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth="1.5"
+                          stroke="currentColor"
+                          className="size-5"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M3 16.5h3c.83 0 1.5-.67 1.5-1.5V6c0-2.48 1.51-4.5 3.5-4.5s3.5 2.02 3.5 4.5v9c0 .83.67 1.5 1.5 1.5h3c.83 0 1.5-.67 1.5-1.5V6.71c0-2.58 2.17-4.71 4.71-4.71h3c2.58 0 4.71 2.13 4.71 4.71v9c0 .83.67 1.5 1.5 1.5z"
+                          />
+                        </svg>
                       </div>
-                    }
-                  >
-                    <span>Download CV</span>
-                  </Button>
-                </a>
+                    </div>
+                  }
+                >
+                  <span>Download CV</span>
+                </Button>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: "100%" }}
