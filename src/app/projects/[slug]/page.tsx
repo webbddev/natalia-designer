@@ -185,16 +185,18 @@ import Link from "next/link";
 import Button from "@/components/Button";
 
 
+interface ProjectDetailPageProps {
+  params: {
+    slug: string;
+  };
+}
+
 export default async function ProjectDetailPage({
   params,
-}: {
-  params: { slug: string };
-}) {
+}: ProjectDetailPageProps) {
   const project = await getProjectBySlug(params.slug);
 
-  if (!project) {
-    return notFound();
-  }
+  if (!project) return notFound();
 
   return (
     <main className="container py-16">
