@@ -3,6 +3,7 @@
 import Button from "@/components/Button";
 import { FC, useEffect, useState } from "react";
 import { motion, useAnimate } from "motion/react";
+import Link from "next/link";
 
 /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
 const navItems = [
@@ -56,7 +57,7 @@ const Header: FC = () => {
           ],
         ],
         {
-          duration: .5, // Duration in seconds
+          duration: 0.5, // Duration in seconds
         }
       );
 
@@ -77,7 +78,7 @@ const Header: FC = () => {
           ],
         ],
         {
-          duration: .5, // Duration in seconds
+          duration: 0.5, // Duration in seconds
         }
       );
 
@@ -111,7 +112,7 @@ const Header: FC = () => {
           ],
         ],
         {
-          duration: .5, // Duration in seconds
+          duration: 0.5, // Duration in seconds
         }
       );
 
@@ -134,7 +135,7 @@ const Header: FC = () => {
           ],
         ],
         {
-          duration: .5, // Duration in seconds
+          duration: 0.5, // Duration in seconds
         }
       );
 
@@ -167,8 +168,8 @@ const Header: FC = () => {
       >
         <nav className="mt-20 flex flex-col ">
           {navItems.map(({ label, href }) => (
-            <a
-              href={href}
+            <Link
+              href={`/${href}`}
               key={label}
               className="text-stone-200 border-t last:border-b border-stone-800 py-8 group/nav-item relative isolate"
               onClick={() => {
@@ -196,7 +197,7 @@ const Header: FC = () => {
               </div>
               {/* Hover effect background with animated height transition */}
               <div className="absolute w-full h-0 bg-stone-800 group-hover/nav-item:h-full transition-all duration-500 bottom-0 -z-10" />
-            </a>
+            </Link>
           ))}
         </nav>
       </div>
@@ -209,7 +210,7 @@ const Header: FC = () => {
             <div>
               <a href="/">
                 <span className="text-xl font-bold uppercase text-white">
-                  Alevtina&nbsp; Gordienko
+                  Natalia&nbsp; Byhalova
                 </span>
               </a>
             </div>
@@ -259,7 +260,11 @@ const Header: FC = () => {
                 </svg>
               </div>
               {/* Contact button - visible only on medium screens and larger */}
-              <Button variant="primary" className="hidden md:inline-flex">
+              <Button
+                variant="primary"
+                className="hidden md:inline-flex"
+                href="/#contact"
+              >
                 Contact Me
               </Button>
             </div>

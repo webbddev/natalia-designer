@@ -7,10 +7,23 @@ type ButtonProps = {
   variant: "primary" | "secondary" | "text";
   iconAfter?: ReactNode;
   href?: string;
+  target?: string;
+  rel?: string;
+  download?: boolean;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 const Button = (props: ButtonProps) => {
-  const { className, children, variant, iconAfter, href, ...rest } = props;
+  const {
+    className,
+    children,
+    variant,
+    iconAfter,
+    href,
+    target,
+    rel,
+    download,
+    ...rest
+  } = props;
 
   const buttonClasses = twMerge(
     "h-11 px-6 rounded-xl border border-red-orange-500 uppercase inline-flex items-center gap-2 transition duration-500 relative group/button",
@@ -36,9 +49,25 @@ const Button = (props: ButtonProps) => {
     }
   };
 
+  // if (href) {
+  //   return (
+  //     <a href={href} className={buttonClasses} onClick={handleClick}>
+  //       <span>{children}</span>
+  //       {iconAfter && <span>{iconAfter}</span>}
+  //     </a>
+  //   );
+  // }
+
   if (href) {
     return (
-      <a href={href} className={buttonClasses} onClick={handleClick}>
+      <a
+        href={href}
+        className={buttonClasses}
+        onClick={handleClick}
+        target={target} // <-- pass target
+        rel={rel} // <-- pass rel
+        download={download} // pass download if present
+      >
         <span>{children}</span>
         {iconAfter && <span>{iconAfter}</span>}
       </a>

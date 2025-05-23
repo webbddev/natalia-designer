@@ -31,6 +31,10 @@ const config: Config = {
         "red-orange": {
           // modern CSS function that blends two or more colors. 
           // 50% red, 50% orange
+          100: "color-mix(in srgb, theme('colors.red.100') 50%, theme('colors.orange.100') 50%)",
+          200: "color-mix(in srgb, theme('colors.red.200') 50%, theme('colors.orange.200') 50%)",
+          300: "color-mix(in srgb, theme('colors.red.300') 50%, theme('colors.orange.300') 50%)",
+          400: "color-mix(in srgb, theme('colors.red.400') 50%, theme('colors.orange.400') 50%)",
           500: "color-mix(in srgb, theme('colors.red.500') 50%, theme('colors.orange.500') 50%)",
           // 500: "#FF4500", // This is a direct red-orange color
         },
