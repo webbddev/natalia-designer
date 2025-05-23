@@ -1,1 +1,1 @@
-self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/nikolaj/DVLP Projects/portfolio-frontendtribe_15dec2024/src/app/layout":["static/media/b4f46b1ccc361ec4-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';
+self.__NEXT_FONT_MANIFEST="{\n  \"app\": {\n    \"[project]/src/app/page\": [\n      \"static/media/k3kPo8UDI_1M0wlSV9XAw6lQkqWY8Q82sLydOxKsv4Rn-s.p.3ef2f81b.woff2\"\n    ]\n  },\n  \"appUsingSizeAdjust\": true,\n  \"pages\": {},\n  \"pagesUsingSizeAdjust\": false\n}"
