@@ -184,17 +184,15 @@ import ProjectGallery from "@/components/Gallery";
 import Link from "next/link";
 import Button from "@/components/Button";
 
-
 interface ProjectDetailPageProps {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
 }
 
 export default async function ProjectDetailPage({
   params,
 }: ProjectDetailPageProps) {
-  const project = await getProjectBySlug(params.slug);
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
 
   if (!project) return notFound();
 

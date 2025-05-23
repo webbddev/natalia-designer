@@ -127,9 +127,9 @@ export const projectsData = [
 //   return projectsData.find((project) => project.slug === slug);
 // };
 
-export const getProjectBySlug = async (slug: string) => {
+export const getProjectBySlug = (slug: string) => {
   return projectsData.find((project) => project.slug === slug);
 };
-export const getAllProjectSlugs = async () => {
+export const getAllProjectSlugs = () => {
   return projectsData.map((project) => project.slug);
 };
