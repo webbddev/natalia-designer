@@ -104,7 +104,7 @@ const Hero: FC = () => {
               >
                 <Button
                   variant="primary"
-                  href="/Byhalova Natаlia - CV.pdf"
+                  href="/Byhalova Natalia - CV.pdf"
                   className="hover:bg-red-orange-300"
                   target="_blank"
                   rel="noopener noreferrer"
