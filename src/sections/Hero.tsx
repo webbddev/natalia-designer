@@ -108,6 +108,7 @@ const Hero: FC = () => {
                   className="hover:bg-red-orange-300"
                   target="_blank"
                   rel="noopener noreferrer"
+                  download
                   iconAfter={
                     <div className="overflow-hidden size-5">
                       <div className="h-5 w-10 flex group-hover/button:-translate-x-1/2 transition-transform duration-500">
