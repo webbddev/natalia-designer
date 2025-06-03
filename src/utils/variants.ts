@@ -1,5 +1,5 @@
 // fadeIn function
-export const fadeIn = (direction) => {
+export const fadeIn = (direction: "up" | "down" | "left" | "right" ) => {
   return {
     hidden: {
       y: direction === "up" ? 80 : direction === "down" ? -80 : 0,

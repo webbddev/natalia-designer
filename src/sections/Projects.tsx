@@ -1,9 +1,8 @@
-import { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { projectsData } from "@/data/projects-data";
 
-const Projects: FC = () => {
+const Projects = () => {
   return (
     <section className="section" id="projects">
       <div className="container">

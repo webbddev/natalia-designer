@@ -64,9 +64,9 @@ const Button = (props: ButtonProps) => {
         href={href}
         className={buttonClasses}
         onClick={handleClick}
-        target={target} // <-- pass target
-        rel={rel} // <-- pass rel
-        download={download} // pass download if present
+        target={target} 
+        rel={rel} 
+        download={download} 
       >
         <span>{children}</span>
         {iconAfter && <span>{iconAfter}</span>}

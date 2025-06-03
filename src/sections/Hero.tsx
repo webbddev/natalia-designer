@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import heroImage from "@/assets/images/hero-image.jpg";
 import aboutMeImage from "@/assets/images/nat3.png";
 import Image from "next/image";
@@ -9,7 +9,7 @@ import SplitType from "split-type";
 import { useAnimate, motion, useScroll, useTransform } from "motion/react";
 import { stagger } from "motion";
 
-const Hero: FC = () => {
+const Hero = () => {
   const [titleScope, titleAnimate] = useAnimate();
   const scrollingDiv = useRef<HTMLDivElement>(null);
 
@@ -37,7 +37,7 @@ const Hero: FC = () => {
 
   return (
     <section id="hero">
-      <div className="grid md:grid-cols-12 md:h-screen items-stretch sticky  top-0">
+      <div className="grid md:grid-cols-12 md:h-screen items-stretch sticky top-0">
         {/* Left Side Content on md: */}
         <div className="md:col-span-7 flex flex-col justify-center">
           <div className="container max-w-full 2xl:max-w-[1030px]">

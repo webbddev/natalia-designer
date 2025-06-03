@@ -12,6 +12,7 @@ import {
 import Lightbox from "yet-another-react-lightbox";
 import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import  Zoom  from "yet-another-react-lightbox/plugins/zoom";
 
 // Styles
 import "yet-another-react-lightbox/styles.css";
@@ -60,6 +61,9 @@ function renderNextImage(
         alt={alt}
         title={title}
         sizes={sizes}
+        style={{
+          objectFit: "cover", // This prevents stretching
+        }}
         placeholder={"blurDataURL" in photo ? "blur" : undefined}
       />
     </div>
@@ -91,6 +95,8 @@ const getImageUrl = (imageSource: any): string => {
 const ProjectGallery = ({ gallery }: GalleryProps) => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [advancedExampleOpen, setAdvancedExampleOpen] = useState(false);
+
 
   const { title, btnText, btnIcon, images } = gallery;
 
@@ -117,14 +123,14 @@ const ProjectGallery = ({ gallery }: GalleryProps) => {
   }));
 
   return (
-    <section className="py-12">
-      <div className="container mx-auto">
+    <section className="pt-0 pb-4 lg:py-12">
+      <div className="container mx-auto pl-0">
         <motion.h2
           variants={fadeIn("up")}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.6 }}
-          className="text-3xl md:text-4xl lg:text-5xl mb-8 lg:mb-12"
+          className="text-3xl md:text-4xl lg:text-5xl mb-8 lg:mb-12 font-bold"
         >
           {title}
         </motion.h2>
@@ -158,11 +164,39 @@ const ProjectGallery = ({ gallery }: GalleryProps) => {
           }}
           close={() => setLightboxOpen(false)}
           index={currentIndex}
-          plugins={[Slideshow, Thumbnails]}
+          plugins={[Slideshow, Thumbnails, Zoom]}
+          render={{
+            slide: ({ slide }) => (
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "100%",
+                  height: "100%",
+                  padding: "5px",
+                }}
+              >
+                <img
+                  src={slide.src}
+                  alt={slide.alt}
+                  style={{
+                    maxHeight: "min(2546px, 100%)",
+                    maxWidth: "min(840px, 100%)",
+                    transform: "translateZ(0px)",
+                    width: "100%",
+                    height: "auto",
+                    objectFit: "contain",
+                    borderRadius: "4px",
+                  }}
+                />
+              </div>
+            ),
+          }}
         />
       </motion.div>
 
-      <motion.div
+      {/* <motion.div
         variants={fadeIn("up")}
         initial="hidden"
         whileInView={"show"}
@@ -175,7 +209,7 @@ const ProjectGallery = ({ gallery }: GalleryProps) => {
         >
           {btnText} <span className="ml-2">{btnIcon}</span>
         </a>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 };

@@ -182,7 +182,6 @@ import { notFound } from "next/navigation";
 import { getProjectBySlug } from "@/data/projects-data";
 import ProjectGallery from "@/components/Gallery";
 import Link from "next/link";
-import Button from "@/components/Button";
 
 interface ProjectDetailPageProps {
   params: Promise<{ slug: string }>;
@@ -197,25 +196,40 @@ export default async function ProjectDetailPage({
   if (!project) return notFound();
 
   return (
-    <main className="container py-16">
+    <main className="container pt-24 pb-16 min-h-screen overflow-auto">
       <h1 className="text-4xl md:text-6xl font-bold mb-6">{project.name}</h1>
-      <div className="mb-8 text-lg text-stone-700">{project.description}</div>
-      <div className="mb-8">
-        <span className="font-semibold">Client:</span> {project.client} <br />
-        <span className="font-semibold">Year:</span> {project.year} <br />
-        <span className="font-semibold">Services:</span>{" "}
-        {project.services?.join(", ")} <br />
-        <span className="font-semibold">Technologies:</span>{" "}
-        {project.technologies?.join(", ")}
+      <div className="mb-8 text-xl text-stone-700">{project.description}</div>
+
+      {/* Project details - client, year, services, technologies */}
+      <div className="mb-8 text-lg text-stone-800">
+        <div className="flex flex-wrap">
+          <span className="font-semibold pr-1">Client:</span>
+          <span>{project.client}</span>
+        </div>
+        <div className="flex flex-wrap">
+          <span className="font-semibold pr-1">Year: </span>
+          <span>{project.year}</span>
+        </div>
+        <div className="flex flex-wrap">
+          <span className="font-semibold pr-1">Services: </span>
+          <span>{project.services?.join(", ")}</span>
+        </div>
+        <div className="flex flex-wrap">
+          <span className="font-semibold pr-1">Technologies: </span>
+          <span>{project.technologies?.join(", ")}</span>
+        </div>
       </div>
+
       <div className="mb-8">
         <h2 className="text-2xl font-semibold mb-2">Challenge</h2>
-        <p>{project.challenge}</p>
+        <p className="text-lg">{project.challenge}</p>
       </div>
+
       <div className="mb-8">
         <h2 className="text-2xl font-semibold mb-2">Solution</h2>
-        <p>{project.solution}</p>
+        <p className="text-lg">{project.solution}</p>
       </div>
+      
       {/* Gallery */}
       {project.gallery && <ProjectGallery gallery={project.gallery} />}
 

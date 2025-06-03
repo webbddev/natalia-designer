@@ -3,13 +3,15 @@ import image2 from "@/assets/images/project-2.jpg";
 import image3 from "@/assets/images/project-3.jpg";
 import image4 from "@/assets/images/project-4.jpg";
 import image5 from "@/assets/images/project-5.jpg";
+import image6 from "@/assets/images/project-4.jpg";
+import image7 from "@/assets/images/project-3.jpg";
+import image8 from "@/assets/images/project-2.jpg";
 
 // Import additional project images (adjust paths as needed)
 // You can organize these in your project-images folder
 import artisanDetail1 from "@/assets/project-images/project-1/1.png";
 import artisanDetail2 from "@/assets/project-images/project-1/2.png";
 import artisanDetail3 from "@/assets/project-images/project-1/3.png";
-
 
 // Import other project images similarly
 
@@ -29,7 +31,7 @@ export const projectsData = [
       "The client needed a website that reflected their artisanal approach while providing a seamless shopping experience.",
     solution:
       "I created a custom design that emphasizes the craftsmanship of their products with an intuitive e-commerce flow.",
-    url: "https://artisanbrewco.example.com",
+    url: "",
     gallery: {
       title: "Project Gallery",
       btnText: "Go back to Projects",
@@ -54,7 +56,35 @@ export const projectsData = [
           original: artisanDetail2,
           width: 1080,
           height: 720,
-          alt: "Mobile view",
+          alt: "Tattoo man's back view",
+        },
+        {
+          src: artisanDetail3,
+          original: artisanDetail3,
+          width: 1080,
+          height: 720,
+          alt: "About page",
+        },
+        {
+          src: artisanDetail3,
+          original: artisanDetail3,
+          width: 1080,
+          height: 720,
+          alt: "About page",
+        },
+        {
+          src: artisanDetail3,
+          original: artisanDetail3,
+          width: 1080,
+          height: 720,
+          alt: "About page",
+        },
+        {
+          src: artisanDetail3,
+          original: artisanDetail3,
+          width: 1080,
+          height: 720,
+          alt: "About page",
         },
         {
           src: artisanDetail3,
@@ -123,9 +153,6 @@ export const projectsData = [
 ];
 
 // Helper functions
-// export const getProjectBySlug = (slug) => {
-//   return projectsData.find((project) => project.slug === slug);
-// };
 
 export const getProjectBySlug = (slug: string) => {
   return projectsData.find((project) => project.slug === slug);

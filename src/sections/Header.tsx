@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/components/Button";
-import { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, useAnimate } from "motion/react";
 import Link from "next/link";
 
@@ -29,7 +29,7 @@ const navItems = [
   },
 ];
 
-const Header: FC = () => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   // Animation hooks for hamburger menu transformation
   const [topLineScope, topLineAnimate] = useAnimate();
@@ -208,7 +208,7 @@ const Header: FC = () => {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div>
-              <a href="/">
+              <a href="#hero">
                 <span className="text-xl font-bold uppercase text-white">
                   Natalia&nbsp; Byhalova
                 </span>
