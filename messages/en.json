@@ -1,0 +1,128 @@
+{
+  "header": {
+    "logo": "Natalia Bykhalova",
+    "nav": {
+      "about": "About",
+      "selectedWorks": "Selected Works",
+      "testimonials": "Testimonials",
+      "faqs": "FAQs",
+      "contact": "Contact"
+    },
+    "contactButton": "Contact"
+  },
+  "hero": {
+    "title": "Building beautiful websites that convert visitors into customers",
+    "viewWorkButton": "View my work",
+    "downloadCvButton": "Download CV",
+    "letsTalkButton": "Let's talk",
+    "portraitAlt": "Natalia Bykhalova portrait"
+  },
+  "intro": {
+    "headline": "I help businesses grow by creating websites that look great and work even better"
+  },
+  "projects": {
+    "heading": "Selected Works",
+    "imageAlt": "{name} project image"
+  },
+  "common": {
+    "client": "Client",
+    "year": "Year",
+    "services": "Services",
+    "technologies": "Technologies",
+    "challenge": "Challenge",
+    "solution": "Solution",
+    "backToProjects": "Back to All Projects"
+  },
+  "projectDetail": {
+    "backToProjects": "Back to All Projects",
+    "artisan-brew-co": {
+      "name": "Artisan Brew Co.",
+      "description": "A modern website for a craft brewery featuring their product catalog and brand story.",
+      "client": "Artisan Brew Co.",
+      "services": ["Web Design", "Development", "Branding"],
+      "technologies": ["React", "Next.js", "Tailwind CSS"],
+      "challenge": "The client needed a website that reflected their artisanal approach while providing a seamless shopping experience.",
+      "solution": "I created a custom design that emphasizes the craftsmanship of their products with an intuitive e-commerce flow."
+    },
+    "wavelength-studios": {
+      "name": "Wavelength Studios",
+      "description": "A portfolio site for a sound design studio showcasing their work and services.",
+      "client": "Wavelength Studios",
+      "services": ["Web Design", "Development", "UX Design"],
+      "technologies": ["React", "Next.js", "Framer Motion"],
+      "challenge": "Creating an interactive experience that represents audio work visually.",
+      "solution": "Implemented audio visualizations and interactive elements that respond to sound samples."
+    },
+    "nova-fitness": {
+      "name": "Nova Fitness",
+      "description": "A bold landing page for a boutique fitness studio.",
+      "client": "Nova Fitness",
+      "services": ["Web Design", "Development"],
+      "technologies": ["Next.js", "Tailwind CSS", "Framer Motion"],
+      "challenge": "Differentiate the studio in a saturated fitness market.",
+      "solution": "High-impact visuals and a conversion-focused booking flow."
+    },
+    "urban-plates": {
+      "name": "Urban Plates",
+      "description": "An online menu & ordering system for a modern fast-casual restaurant.",
+      "client": "Urban Plates",
+      "services": ["UX/UI", "Development"],
+      "technologies": ["React", "Stripe", "Next.js"],
+      "challenge": "Integrate real-time kitchen tickets and third-party delivery.",
+      "solution": "Custom Node middleware synchronising POS and web orders."
+    },
+    "bloom-botanicals": {
+      "name": "Bloom Botanicals",
+      "description": "E-commerce for a natural skincare brand.",
+      "client": "Bloom Botanicals",
+      "services": ["Branding", "E-commerce", "Photography"],
+      "technologies": ["Shopify", "Liquid", "Figma"],
+      "challenge": "Translate an offline boutique feel into an online store.",
+      "solution": "Warm colour palette, micro-animations and scent-based filtering."
+    }
+  },
+  "testimonials": {
+    "heading": "Some nice words from my past clients",
+    "prevButton": "Previous testimonial",
+    "nextButton": "Next testimonial"
+  },
+  "faqs": {
+    "heading": "FAQs",
+    "questions": [
+      {
+        "question": "How long does it take to build a website?",
+        "answer": "It depends on the complexity of the website and the scope of the project."
+      },
+      {
+        "question": "What is your development process like?",
+        "answer": "I follow a hands-on approach starting with project planning, building out the core features, and regular check-ins to make sure everything matches your needs."
+      },
+      {
+        "question": "Do you work with international clients?",
+        "answer": "Yes, I work with clients globally and can accommodate different time zones for meetings and communication."
+      },
+      {
+        "question": "What industries do you specialize in?",
+        "answer": "I have experience across various industries including technology, retail, hospitality, and professional services, bringing fresh perspectives to each project."
+      }
+    ]
+  },
+  "footer": {
+    "availability": "One spot available for next month",
+    "heading": "Enough talk. Let's make something great together.",
+    "email": "natalia.bykhalova@gmail.com",
+    "nav": {
+      "home": "Home",
+      "projects": "Projects",
+      "testimonials": "Testimonials",
+      "faqs": "Faqs",
+      "contact": "Contact"
+    },
+    "copyright": "Copyright © Alevtina Gordienko • All rights reserved"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page you are looking for does not exist.",
+    "goHome": "Go back home"
+  }
+}

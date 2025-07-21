@@ -1,20 +1,24 @@
-"use client";
+'use client';
+
 import Button from "@/components/Button";
 import useTextRevealAnimation from "@/hooks/useTextRevealAnimation";
 import { FC, useEffect } from "react";
 import { useInView } from "motion/react";
-
-const navItems = [
-  { href: "#hero", label: "Home" },
-  { href: "#projects", label: "Projects" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#faqs", label: "Faqs" },
-  { href: "#contact", label: "Contact" },
-];
+import { useTranslations } from "next-intl";
 
 const Footer: FC = () => {
+  const t = useTranslations("footer");
   const { scope, entranceAnimation } = useTextRevealAnimation();
   const inView = useInView(scope);
+
+  // Create navItems using translations
+  const navItems = [
+    { href: "#hero", label: t("nav.home") },
+    { href: "#projects", label: t("nav.projects") },
+    { href: "#testimonials", label: t("nav.testimonials") },
+    { href: "#faqs", label: t("nav.faqs") },
+    { href: "#contact", label: t("nav.contact") },
+  ];
 
   useEffect(() => {
     if (inView) {
@@ -29,7 +33,7 @@ const Footer: FC = () => {
           {/* Availability / green dot indicator */}
           <div className="flex items-center gap-3">
             <div className="size-4 rounded-full bg-green-400 animate-pulse" />
-            <span className="uppercase">One spot available for next month</span>
+            <span className="uppercase">{t("availability")}</span>
           </div>
 
           {/* Main footer content in a responsive grid layout */}
@@ -40,17 +44,17 @@ const Footer: FC = () => {
                 className="text-4xl md:text-7xl lg:text-8xl mt-8 font-extralight"
                 ref={scope}
               >
-                Enough talk. Let&apos;s make something great together.
+                {t("heading")}
               </h2>
 
               {/* Email contact button with arrow icon */}
               <Button
                 variant="secondary"
                 className="mt-8 px-3"
-                href="mailto:alevtina.gordienko@gmail.com"
+                href={`mailto:${t("email")}`}
                 iconAfter={
                   <div className="size-6 overflow-hidden">
-                    <div className="w-12 h-6 flex transition-transform duration-300 group-hover/button:-translate-x-1/2" >
+                    <div className="w-12 h-6 flex transition-transform duration-300 group-hover/button:-translate-x-1/2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -83,7 +87,7 @@ const Footer: FC = () => {
                   </div>
                 }
               >
-                alevtina.gordienko@gmail.com
+                {t("email")}
               </Button>
             </div>
 
@@ -104,9 +108,7 @@ const Footer: FC = () => {
             </div>
           </div>
         </div>
-        <p className="py-16 text-white/30 text-sm">
-          Copyright &copy; Alevtina Gordienko &bull; All rights reserved
-        </p>
+        <p className="py-16 text-white/30 text-sm">{t("copyright")}</p>
       </div>
     </footer>
   );

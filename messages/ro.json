@@ -1,0 +1,128 @@
+{
+  "header": {
+    "logo": "Natalia Bykhalova",
+    "nav": {
+      "about": "Despre",
+      "selectedWorks": "Lucrări selectate",
+      "testimonials": "Testimoniale",
+      "faqs": "Întrebări",
+      "contact": "Contact"
+    },
+    "contactButton": "Contactează-mă"
+  },
+  "hero": {
+    "title": "Creez site-uri web frumoase care transformă vizitatorii în clienți",
+    "viewWorkButton": "Vezi lucrările",
+    "downloadCvButton": "Descarcă CV",
+    "letsTalkButton": "Să vorbim",
+    "portraitAlt": "Portret Alevtina Gordienko"
+  },
+  "intro": {
+    "headline": "Ajut afacerile să crească prin crearea de site-uri web care arată grozav și funcționează și mai bine"
+  },
+  "projects": {
+    "heading": "Lucrări selectate",
+    "imageAlt": "Imagine proiect {name}"
+  },
+  "common": {
+    "client": "Client",
+    "year": "An",
+    "services": "Servicii",
+    "technologies": "Tehnologii",
+    "challenge": "Provocare",
+    "solution": "Soluție",
+    "backToProjects": "Înapoi la toate proiectele"
+  },
+  "projectDetail": {
+    "backToProjects": "Înapoi la toate proiectele",
+    "artisan-brew-co": {
+      "name": "Artisan Brew Co.",
+      "description": "Un site modern pentru o fabrică de bere artizanală, care prezintă catalogul de produse și povestea brandului.",
+      "client": "Artisan Brew Co.",
+      "services": ["Design Web", "Dezvoltare", "Branding"],
+      "technologies": ["React", "Next.js", "Tailwind CSS"],
+      "challenge": "Clientul avea nevoie de un site web care să reflecte abordarea lor artizanală, oferind în același timp o experiență de cumpărături fluidă.",
+      "solution": "Am creat un design personalizat care accentuează măiestria produselor lor, cu un flux de comerț electronic intuitiv."
+    },
+    "wavelength-studios": {
+      "name": "Wavelength Studios",
+      "description": "Un site de portofoliu pentru un studio de design de sunet, care își prezintă lucrările și serviciile.",
+      "client": "Wavelength Studios",
+      "services": ["Design Web", "Dezvoltare", "Design UX"],
+      "technologies": ["React", "Next.js", "Framer Motion"],
+      "challenge": "Crearea unei experiențe interactive care să reprezinte vizual munca audio.",
+      "solution": "Am implementat vizualizări audio și elemente interactive care răspund la mostrele de sunet."
+    },
+    "nova-fitness": {
+      "name": "Nova Fitness",
+      "description": "O pagină de destinație (landing page) îndrăzneață pentru un studio de fitness de tip boutique.",
+      "client": "Nova Fitness",
+      "services": ["Design Web", "Dezvoltare"],
+      "technologies": ["Next.js", "Tailwind CSS", "Framer Motion"],
+      "challenge": "Diferențierea studioului pe o piață de fitness saturată.",
+      "solution": "Elemente vizuale de mare impact și un flux de rezervări axat pe conversie."
+    },
+    "urban-plates": {
+      "name": "Urban Plates",
+      "description": "Un meniu online și sistem de comenzi pentru un restaurant modern de tip fast-casual.",
+      "client": "Urban Plates",
+      "services": ["UX/UI", "Dezvoltare"],
+      "technologies": ["React", "Stripe", "Next.js"],
+      "challenge": "Integrarea bonurilor de comandă pentru bucătărie în timp real și a livrării prin terți.",
+      "solution": "Middleware Node.js personalizat care sincronizează comenzile de la punctul de vânzare (POS) și cele de pe web."
+    },
+    "bloom-botanicals": {
+      "name": "Bloom Botanicals",
+      "description": "Comerț electronic pentru un brand de produse naturale de îngrijire a pielii.",
+      "client": "Bloom Botanicals",
+      "services": ["Branding", "Comerț electronic", "Fotografie"],
+      "technologies": ["Shopify", "Liquid", "Figma"],
+      "challenge": "Transpunerea sentimentului unui butic fizic într-un magazin online.",
+      "solution": "O paletă de culori calde, micro-animații și filtrare bazată pe arome."
+    }
+  },
+  "testimonials": {
+    "heading": "Câteva cuvinte frumoase de la clienții mei anteriori",
+    "prevButton": "Testimonial anterior",
+    "nextButton": "Testimonial următor"
+  },
+  "faqs": {
+    "heading": "Întrebări frecvente",
+    "questions": [
+      {
+        "question": "Cât durează să creezi un site web?",
+        "answer": "Depinde de complexitatea site-ului web și de amploarea proiectului."
+      },
+      {
+        "question": "Cum arată procesul tău de dezvoltare?",
+        "answer": "Urmez o abordare practică, începând cu planificarea proiectului, construirea funcționalităților de bază și verificări regulate pentru a mă asigura că totul se aliniază cu nevoile tale."
+      },
+      {
+        "question": "Lucrezi cu clienți internaționali?",
+        "answer": "Da, lucrez cu clienți din întreaga lume și mă pot adapta la diferite fusuri orare pentru întâlniri și comunicare."
+      },
+      {
+        "question": "În ce industrii te specializezi?",
+        "answer": "Am experiență în diverse industrii, inclusiv tehnologie, retail, ospitalitate și servicii profesionale, aducând perspective proaspete fiecărui proiect."
+      }
+    ]
+  },
+  "footer": {
+    "availability": "Un loc disponibil pentru luna următoare",
+    "heading": "Destulă vorbă. Hai să creăm ceva grozav împreună.",
+    "email": "natalia.bykhalova@gmail.com",
+    "nav": {
+      "home": "Acasă",
+      "projects": "Proiecte",
+      "testimonials": "Testimoniale",
+      "faqs": "Întrebări",
+      "contact": "Contact"
+    },
+    "copyright": "Drepturi de autor © Alevtina Gordienko • Toate drepturile rezervate"
+  },
+  "notFound": {
+    "title": "Pagină negăsită",
+    "description": "Ne pare rău, pagina pe care o cauți nu există.",
+    "goHome": "Înapoi acasă"
+  }
+}

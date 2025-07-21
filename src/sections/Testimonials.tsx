@@ -5,6 +5,7 @@ import image1 from "@/assets/images/testimonial-1.jpg";
 import image2 from "@/assets/images/testimonial-2.jpg";
 import image3 from "@/assets/images/testimonial-3.jpg";
 import { useScroll, motion, useTransform, AnimatePresence } from "motion/react";
+import { useTranslations } from "next-intl";
 import Testimonial from "@/components/Testimonial";
 
 /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
@@ -39,6 +40,7 @@ const testimonials = [
 ];
 
 const Testimonials: FC = () => {
+  const t = useTranslations("testimonials");
   const titleRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: titleRef,
@@ -72,13 +74,13 @@ const Testimonials: FC = () => {
           className="whitespace-nowrap"
           style={{ x: transformBottom }}
         >
-          Some nice words from my past clients
+          {t("heading")}
         </motion.span>
         <motion.span
           className="whitespace-nowrap self-end text-red-orange-500"
           style={{ x: transformTop }}
         >
-          Some nice words from my past clients
+          {t("heading")}
         </motion.span>
       </h2>
       <div className="container">
@@ -104,6 +106,7 @@ const Testimonials: FC = () => {
           <button
             className="border-2 border-stone-400 size-11 inline-flex items-center justify-center rounded-full hover:bg-red-orange-500 hover:text-white hover:border-red-orange-500 transition-all duration-300"
             onClick={handleClickPrev}
+            aria-label={t("prevButton")}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -123,6 +126,7 @@ const Testimonials: FC = () => {
           <button
             className="border-2 border-stone-400 size-11 inline-flex items-center justify-center rounded-full hover:bg-red-orange-500 hover:text-white hover:border-red-orange-500 transition-all duration-300"
             onClick={handleClickNext}
+            aria-label={t("nextButton")}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

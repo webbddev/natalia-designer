@@ -1,11 +1,12 @@
 "use client";
 
 import { stagger, useAnimate, useInView } from "motion/react";
-import { s } from "motion/react-client";
-import { FC, useEffect } from "react";
+import {  useEffect } from "react";
+import { useTranslations } from "next-intl";
 import SplitType from "split-type";
 
-const Intro: FC = () => {
+const Intro =() => {
+  const t = useTranslations("intro");
   const [scope, animate] = useAnimate();
   const inView = useInView(scope, { once: false });
 
@@ -35,8 +36,7 @@ const Intro: FC = () => {
     <section className="section mt-12 md:pt-16 lg:mt-20" id="intro" ref={scope}>
       <div className="container">
         <h2 className="text-4xl md:text-7xl lg:text-8xl lg:w-[80%]">
-          Building beautiful websites with clean code and thoughtful design to
-          help your business grow and stand out online
+          {t("headline")}
         </h2>
       </div>
     </section>

@@ -8,8 +8,10 @@ import Button from "@/components/Button";
 import SplitType from "split-type";
 import { useAnimate, motion, useScroll, useTransform } from "motion/react";
 import { stagger } from "motion";
+import { useTranslations } from "next-intl";
 
 const Hero = () => {
+  const t = useTranslations("hero");
   const [titleScope, titleAnimate] = useAnimate();
   const scrollingDiv = useRef<HTMLDivElement>(null);
 
@@ -47,7 +49,7 @@ const Hero = () => {
               className="text-5xl md:text-6xl lg:text-7xl mt-40 md:mt-0 "
               ref={titleScope}
             >
-              Crafting digital experience through code and creative design
+              {t("title")}
             </motion.h1>
             {/* Hero CTA buttons */}
             <div className="flex flex-col md:flex-row md:items-center mt-10 items-start gap-6">
@@ -94,7 +96,7 @@ const Hero = () => {
                     </div>
                   }
                 >
-                  <span>View My Work</span>
+                  <span>{t("viewWorkButton")}</span>
                 </Button>
               </motion.div>
               <motion.div
@@ -144,7 +146,7 @@ const Hero = () => {
                     </div>
                   }
                 >
-                  <span>Download CV</span>
+                  <span>{t("downloadCvButton")}</span>
                 </Button>
               </motion.div>
               <motion.div
@@ -153,7 +155,7 @@ const Hero = () => {
                 transition={{ duration: 0.5, delay: 2.2 }}
               >
                 <Button variant="text" href="#contact">
-                  Let&apos;s Talk
+                  {t("letsTalkButton")}
                 </Button>
               </motion.div>
             </div>
@@ -170,7 +172,7 @@ const Hero = () => {
               // src={heroImage}
               // className="size-full object-cover"
               className="h-[550px] md:h-screen md:w-full object-cover"
-              alt="My Portrait"
+              alt={t("portraitAlt")}
             />
           </motion.div>
         </div>

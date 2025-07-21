@@ -1,9 +1,9 @@
 {
   "app": {
-    "[project]/src/app/projects/[slug]/page": [
+    "[project]/src/app/[locale]/page": [
       "static/media/k3kPo8UDI_1M0wlSV9XAw6lQkqWY8Q82sLydOxKsv4Rn-s.p.2124262b.woff2"
     ],
-    "[project]/src/app/_not-found/page": [
+    "[project]/src/app/[locale]/projects/[slug]/page": [
       "static/media/k3kPo8UDI_1M0wlSV9XAw6lQkqWY8Q82sLydOxKsv4Rn-s.p.2124262b.woff2"
     ]
   },

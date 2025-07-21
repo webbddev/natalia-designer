@@ -1,44 +1,41 @@
 "use client";
 
 import { AnimatePresence, motion } from "motion/react";
+import { useTranslations } from "next-intl";
 import { FC, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
-/* eslint-disable-next-line @typescript-eslint/no-unused-vars */
-const faqs = [
-  {
-    question: "How long does it take to build a website?",
-    answer:
-      "It depends on the complexity of the website and the scope of the project.",
-  },
-  {
-    question: "What is your development process like?",
-    answer:
-      "I follow a hands-on approach starting with project planning, building out the core features, and regular check-ins to make sure everything matches your needs.",
-  },
-  {
-    question: "Do you work with international clients?",
-    answer:
-      "Yes, I work with clients globally and can accommodate different time zones for meetings and communication.",
-  },
-  {
-    question: "What industries do you specialize in?",
-    answer:
-      "I have experience across various industries including technology, retail, hospitality, and professional services, bringing fresh perspectives to each project.",
-  },
-];
-
 const FAQs: FC = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const t = useTranslations("faqs");
+
+  const faqs = [
+    {
+      question: t("questions.0.question"),
+      answer: t("questions.0.answer"),
+    },
+    {
+      question: t("questions.1.question"),
+      answer: t("questions.1.answer"),
+    },
+    {
+      question: t("questions.2.question"),
+      answer: t("questions.2.answer"),
+    },
+    {
+      question: t("questions.3.question"),
+      answer: t("questions.3.answer"),
+    },
+  ];
 
   return (
     <section className="section" id="faqs">
       <div className="container">
-        <h2 className="text-4xl md:text-7xl lg:text-8xl">FAQs</h2>
+        <h2 className="text-4xl md:text-7xl lg:text-8xl">{t("heading")}</h2>
         <div className="mt-10 md:mt-16 lg:mt-20">
           {faqs.map(({ question, answer }, faqIndex) => (
             <div
-              key={question}
+              key={faqIndex}
               className="border-t border-stone-400 border-dotted py-6 md:py-8 lg:py-10 last:border-b relative isolate group/faq"
               onClick={() =>
                 setSelectedIndex((prev) =>

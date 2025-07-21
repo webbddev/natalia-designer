@@ -1,3 +1,396 @@
 https://www.youtube.com/watch?v=w6z74VlnTSo
 stopped at 2:17:05
 next - FAQs Animations
+
+"projectsData": {
+    "backToProjects": "Înapoi la toate proiectele",
+    "challenge": "Provocare",
+    "solution": "Soluție",
+    "client": "Client",
+    "year": "An",
+    "services": "Servicii",
+    "technologies": "Tehnologii",
+    "projects": [
+      {
+        "id": 1,
+        "name": "Artisan Brew Co.",
+        "slug": "artisan-brew-co",
+        "description": "Un site web modern pentru o berărie artizanală, prezentând catalogul lor de produse și povestea brandului.",
+        "client": "Artisan Brew Co.",
+        "year": "2023",
+        "services": ["Web Design", "Dezvoltare", "Branding"],
+        "technologies": ["React", "Next.js", "Tailwind CSS"],
+        "challenge": "Clientul avea nevoie de un site web care să reflecte abordarea lor artizanală, oferind în același timp un proces de cumpărare ușor de utilizat.",
+        "solution": "Am creat un design personalizat care evidențiază măiestria produselor lor cu un proces de e-commerce intuitiv.",
+        "gallery": {
+          "title": "Galerie proiect",
+          "btnText": "Înapoi la proiecte",
+          "btnIcon": "→"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Wavelength Studios",
+        "slug": "wavelength-studios",
+        "description": "Un site web de portofoliu pentru un studio de design audio, prezentând lucrările și serviciile lor.",
+        "client": "Wavelength Studios",
+        "year": "2023",
+        "services": ["Web Design", "Dezvoltare", "UX Design"],
+        "technologies": ["React", "Next.js", "Framer Motion"],
+        "challenge": "Crearea unei experiențe interactive care reprezintă vizual lucrările audio.",
+        "solution": "Am implementat vizualizări audio și elemente interactive care răspund la eșantioanele de sunet.",
+        "gallery": {
+          "title": "Galerie proiect",
+          "btnText": "Vezi toate proiectele",
+          "btnIcon": "→"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Nova Fitness",
+        "slug": "nova-fitness",
+        "description": "Un site web responsive pentru un centru de fitness modern cu programare de clase și gestionare a membrilor.",
+        "client": "Nova Fitness",
+        "year": "2023",
+        "services": ["Web Design", "Dezvoltare", "Cercetare UX"],
+        "technologies": ["React", "Next.js", "Tailwind CSS"],
+        "challenge": "Crearea unui sistem de programare intuitiv care funcționează pe toate dispozitivele, prezentând în același timp facilitățile premium.",
+        "solution": "Am dezvoltat un design prioritizând dispozitivele mobile, cu un sistem ușor de utilizat pentru rezervarea claselor și tururi virtuale ale facilităților.",
+        "gallery": {
+          "title": "Galerie proiect",
+          "btnText": "Înapoi la proiecte",
+          "btnIcon": "→"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Urban Plates",
+        "slug": "urban-plates",
+        "description": "Un site web de restaurant cu comandă online și afișare a meniului în funcție de locație.",
+        "client": "Urban Plates",
+        "year": "2022",
+        "services": ["Web Design", "Dezvoltare", "E-commerce"],
+        "technologies": ["React", "Next.js", "Stripe"],
+        "challenge": "Crearea unui sistem de comandă online fără probleme care se integrează cu sistemul POS existent al restaurantului, menținând în același timp estetica brandului.",
+        "solution": "Am creat un sistem de comandă personalizat cu actualizări de inventar în timp real și meniuri specifice locației, într-un design care reflectă atmosfera urbană șic a restaurantului.",
+        "gallery": {
+          "title": "Galerie proiect",
+          "btnText": "Înapoi la proiecte",
+          "btnIcon": "→"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Bloom Botanicals",
+        "slug": "bloom-botanicals",
+        "description": "Un site web de e-commerce pentru un magazin de plante de butic cu ghiduri de îngrijire și opțiuni de abonament.",
+        "client": "Bloom Botanicals",
+        "year": "2022",
+        "services": ["Web Design", "Dezvoltare", "E-commerce"],
+        "technologies": ["React", "Next.js", "Shopify"],
+        "challenge": "Crearea unei experiențe de e-commerce care educă clienții despre îngrijirea plantelor, făcând în același timp cumpărăturile simple.",
+        "solution": "Am dezvoltat o experiență de cumpărare intuitivă cu ghiduri de îngrijire integrate pentru fiecare plantă și un serviciu de abonament pentru livrări regulate de plante.",
+        "gallery": {
+          "title": "Galerie proiect",
+          "btnText": "Înapoi la proiecte",
+          "btnIcon": "→"
+        }
+      }
+    ]
+  },
+
+
+  "use client";
+
+import Button from "@/components/Button";
+import { useEffect, useState } from "react";
+import { motion, useAnimate } from "motion/react";
+import { useLocale, useTranslations } from "next-intl";
+import { Link } from "../../i18n/navigation";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { usePathname } from "next/navigation";
+
+const Header = () => {
+  const t = useTranslations("header");
+  const locale = useLocale();
+  const pathname = usePathname();
+
+  const [isOpen, setIsOpen] = useState(false);
+  // Animation hooks for hamburger menu transformation
+  const [topLineScope, topLineAnimate] = useAnimate();
+  const [bottomLineScope, bottomLineAnimate] = useAnimate();
+  const [navScope, navAnimate] = useAnimate();
+
+  // Check if we're on a project detail page
+  const isProjectDetailPage = pathname.includes('/projects/') && pathname.split('/').length > 3;
+
+  // Create navItems using translations
+  const navItems = [
+    {
+      label: t("nav.about"),
+      href: isProjectDetailPage ? "/#intro" : "#intro",
+    },
+    {
+      label: t("nav.selectedWorks"),
+      href: isProjectDetailPage ? "/#projects" : "#projects",
+    },
+    {
+      label: t("nav.testimonials"),
+      href: isProjectDetailPage ? "/#testimonials" : "#testimonials",
+    },
+    {
+      label: t("nav.faqs"),
+      href: isProjectDetailPage ? "/#faqs" : "#faqs",
+    },
+    {
+      label: t("nav.contact"),
+      href: isProjectDetailPage ? "/#contact" : "#contact",
+    },
+  ];
+
+  // ... rest of your existing useEffect and animation code remains the same
+
+  useEffect(() => {
+    if (isOpen) {
+      // When menu opens:
+      // 1. Transform top line to form X (first move down, then rotate)
+      topLineAnimate(
+        [
+          [
+            topLineScope.current,
+            {
+              translateY: 4,
+            },
+          ],
+          [
+            topLineScope.current,
+            {
+              rotate: 45,
+            },
+          ],
+        ],
+        {
+          duration: 0.5, // Duration in seconds
+        }
+      );
+
+      // 2. Transform bottom line to form X (first move up, then rotate)
+      bottomLineAnimate(
+        [
+          [
+            bottomLineScope.current,
+            {
+              translateY: -4,
+            },
+          ],
+          [
+            bottomLineScope.current,
+            {
+              rotate: -45,
+            },
+          ],
+        ],
+        {
+          duration: 0.5, // Duration in seconds
+        }
+      );
+
+      // 3. navAnimate fn to animate navigation menu expansion to full height
+      // with a slower duration for a smooth opening effect
+      navAnimate(
+        navScope.current, // Target element (nav container)
+        { height: "100%" }, // Animation: expand to full height
+        { duration: 0.7 } // Animation options: slower duration
+      );
+    } else {
+      // MENU CLOSING ANIMATIONS
+
+      // Reset top hamburger line:
+      // 1. First rotate back to 0 degrees
+      // 2. Then move back to original Y position
+      // Order matters to create a smooth transition
+      topLineAnimate(
+        [
+          [
+            topLineScope.current,
+            {
+              rotate: 0,
+            },
+          ],
+          [
+            topLineScope.current,
+            {
+              translateY: 0,
+            },
+          ],
+        ],
+        {
+          duration: 0.5, // Duration in seconds
+        }
+      );
+
+      // Reset bottom hamburger line:
+      // 1. First rotate back to 0 degrees
+      // 2. Then move back to original Y position
+      bottomLineAnimate(
+        [
+          [
+            bottomLineScope.current,
+            {
+              rotate: 0,
+            },
+          ],
+          [
+            bottomLineScope.current,
+            {
+              translateY: 0,
+            },
+          ],
+        ],
+        {
+          duration: 0.5, // Duration in seconds
+        }
+      );
+
+      // Animate navigation menu to collapse
+      // with a faster duration for a snappier closing effect
+      navAnimate(
+        navScope.current,
+        {
+          height: 0,
+        },
+        { duration: 0.3 }
+      );
+    }
+  }, [
+    isOpen,
+    topLineAnimate,
+    topLineScope,
+    bottomLineAnimate,
+    bottomLineScope,
+    navScope,
+    navAnimate,
+  ]);
+
+  return (
+    <header>
+      {/* Full-screen navigation overlay */}
+      <div
+        className="fixed top-0 left-0 w-full h-0 overflow-hidden bg-stone-900 z-10"
+        ref={navScope}
+      >
+        <nav className="mt-20 flex flex-col ">
+          {navItems.map(({ label, href }) => (
+            <Link
+              locale={locale}
+              href={href}
+              key={label}
+              className="text-stone-200 border-t last:border-b border-stone-800 py-8 group/nav-item relative isolate"
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
+              <div className="container !max-w-full flex items-center justify-between">
+                <span className="text-3xl group-hover/nav-item:pl-4 transition-all duration-500">
+                  {label}
+                </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                  />
+                </svg>
+              </div>
+              {/* Hover effect background with animated height transition */}
+              <div className="absolute w-full h-0 bg-stone-800 group-hover/nav-item:h-full transition-all duration-500 bottom-0 -z-10" />
+            </Link>
+          ))}
+        </nav>
+      </div>
+
+      {/* Fixed header with logo - uses mix-blend-difference for contrast against any background */}
+      <div className="fixed top-0 left-0 w-full mix-blend-difference backdrop-blur-md z-10">
+        <div className="container !max-w-full">
+          <div className="flex justify-between items-center h-20">
+            {/* Logo */}
+            <div>
+              <Link locale={locale} href="#hero">
+                <span className="text-xl font-bold uppercase text-white">
+                  {t("logo")}
+                </span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Navigation controls container */}
+      <div className="fixed top-0 left-0 w-full z-10">
+        <div className="container !max-w-full">
+          <div className="flex justify-end items-center h-20">
+            {/* Left side - Language Switcher */}
+            <div className="flex items-center">
+              <LanguageSwitcher />
+            </div>
+            {/* Hamburger menu toggle button */}
+            <div className="flex items-center gap-4">
+              <div
+                className="size-11 border border-stone-400 rounded-full inline-flex items-center justify-center bg-stone-200"
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <motion.rect
+                    x="3"
+                    y="7"
+                    width="18"
+                    height="2"
+                    fill="currentColor"
+                    ref={topLineScope}
+                    style={{
+                      transformOrigin: "12px 8px", // Set rotation origin to center of line
+                    }}
+                  />
+                  <motion.rect
+                    x="3"
+                    y="15"
+                    width="18"
+                    height="2"
+                    fill="currentColor"
+                    ref={bottomLineScope}
+                    style={{
+                      transformOrigin: "12px 16px", // Set rotation origin to center of line
+                    }}
+                  />
+                </svg>
+              </div>
+              {/* Contact button - visible only on medium screens and larger */}
+              <Button
+                variant="primary"
+                className="hidden md:inline-flex"
+                href={isProjectDetailPage ? "/#contact" : "#contact"}
+              >
+                {t("contactButton")}
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;

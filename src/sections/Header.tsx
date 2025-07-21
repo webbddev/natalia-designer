@@ -3,38 +3,49 @@
 import Button from "@/components/Button";
 import { useEffect, useState } from "react";
 import { motion, useAnimate } from "motion/react";
-import Link from "next/link";
-
-/* eslint-disable-next-line @typescript-eslint/no-unused-vars */
-const navItems = [
-  {
-    label: "About",
-    href: "#intro",
-  },
-  {
-    label: "Selected Works",
-    href: "#projects",
-  },
-  {
-    label: "Testimonials",
-    href: "#testimonials",
-  },
-  {
-    label: "FAQs",
-    href: "#faqs",
-  },
-  {
-    label: "Contact",
-    href: "#contact",
-  },
-];
+import { useLocale, useTranslations } from "next-intl";
+import { Link } from "../../i18n/navigation";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const t = useTranslations("header");
+  const locale = useLocale();
+  const pathname = usePathname();
+
   const [isOpen, setIsOpen] = useState(false);
   // Animation hooks for hamburger menu transformation
   const [topLineScope, topLineAnimate] = useAnimate();
   const [bottomLineScope, bottomLineAnimate] = useAnimate();
   const [navScope, navAnimate] = useAnimate();
+
+  // Check if we're on a project detail page
+  const isProjectDetailPage =
+    pathname.includes("/projects/") && pathname.split("/").length > 3;
+
+  // Create navItems using translations
+  const navItems = [
+    {
+      label: t("nav.about"),
+      href: isProjectDetailPage ? "/#intro" : "#intro",
+    },
+    {
+      label: t("nav.selectedWorks"),
+      href: isProjectDetailPage ? "/#projects" : "#projects",
+    },
+    {
+      label: t("nav.testimonials"),
+      href: isProjectDetailPage ? "/#testimonials" : "#testimonials",
+    },
+    {
+      label: t("nav.faqs"),
+      href: isProjectDetailPage ? "/#faqs" : "#faqs",
+    },
+    {
+      label: t("nav.contact"),
+      href: isProjectDetailPage ? "/#contact" : "#contact",
+    },
+  ];
 
   // Animate navigation menu on state change
   useEffect(() => {
@@ -169,7 +180,8 @@ const Header = () => {
         <nav className="mt-20 flex flex-col ">
           {navItems.map(({ label, href }) => (
             <Link
-              href={`/${href}`}
+              locale={locale}
+              href={href}
               key={label}
               className="text-stone-200 border-t last:border-b border-stone-800 py-8 group/nav-item relative isolate"
               onClick={() => {
@@ -208,11 +220,11 @@ const Header = () => {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div>
-              <a href="#hero">
+              <Link locale={locale} href="#hero">
                 <span className="text-xl font-bold uppercase text-white">
-                  Natalia&nbsp; Byhalova
+                  {t("logo")}
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -222,6 +234,10 @@ const Header = () => {
       <div className="fixed top-0 left-0 w-full z-10">
         <div className="container !max-w-full">
           <div className="flex justify-end items-center h-20">
+            {/* Left side - Language Switcher */}
+            <div className="flex items-center">
+              <LanguageSwitcher />
+            </div>
             {/* Hamburger menu toggle button */}
             <div className="flex items-center gap-4">
               <div
@@ -260,13 +276,11 @@ const Header = () => {
                 </svg>
               </div>
               {/* Contact button - visible only on medium screens and larger */}
-              <Button
-                variant="primary"
-                className="hidden md:inline-flex"
-                href="/#contact"
-              >
-                Contact Me
-              </Button>
+              <Link href={isProjectDetailPage ? "/#contact" : "#contact"}>
+                <Button variant="primary" className="hidden md:inline-flex">
+                  {t("contactButton")}
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
