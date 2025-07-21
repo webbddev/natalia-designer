@@ -84,7 +84,25 @@
   "testimonials": {
     "heading": "Câteva cuvinte frumoase de la clienții mei anteriori",
     "prevButton": "Testimonial anterior",
-    "nextButton": "Testimonial următor"
+    "nextButton": "Testimonial următor",
+    "testimonial1": {
+      "name": "Sarah Chen",
+      "company": "Pixel Perfect",
+      "role": "Șef de Design",
+      "quote": "Expertiza Nataliei atât în dezvoltarea tehnică, cât și în design a creat un site web frumos și performant care ne-a depășit așteptările."
+    },
+    "testimonial2": {
+      "name": "Marcus Rodriguez",
+      "company": "Craft Coffee Co.",
+      "role": "Fondator",
+      "quote": "Natalia a transformat brandul nostru de cafea boutique cu un site web care echilibrează perfect estetica și funcționalitatea. Rezultatele vorbesc de la sine."
+    },
+    "testimonial3": {
+      "name": "Emily Watson",
+      "company": "Studio Minimal",
+      "role": "Director Creativ",
+      "quote": "Procesul de colaborare a fost uimitor. Natalia a adus multe perspective proaspete și soluții inovatoare la proiectul nostru."
+    }
   },
   "faqs": {
     "heading": "Întrebări frecvente",

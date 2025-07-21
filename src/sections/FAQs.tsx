@@ -3,7 +3,6 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useTranslations } from "next-intl";
 import { FC, useState } from "react";
-import { twMerge } from "tailwind-merge";
 
 const FAQs: FC = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);

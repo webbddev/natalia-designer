@@ -6,16 +6,18 @@ import {
   Intro,
   Projects,
   Testimonials,
+  Testimonials_NoImage,
 } from "@/sections";
 
 export default function Home() {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <Hero />
       <Intro />
       <Projects />
-      <Testimonials />
+      <Testimonials_NoImage />
+      {/* <Testimonials /> */}
       <FAQs />
       <Footer />
     </>

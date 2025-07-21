@@ -84,7 +84,25 @@
   "testimonials": {
     "heading": "Some nice words from my past clients",
     "prevButton": "Previous testimonial",
-    "nextButton": "Next testimonial"
+    "nextButton": "Next testimonial",
+    "testimonial1": {
+      "name": "Sarah Chen",
+      "company": "Pixel Perfect",
+      "role": "Head of Design",
+      "quote": "Natalia's expertise in both technical development and design created a beautiful, high-performing website that exceeded our expectations."
+    },
+    "testimonial2": {
+      "name": "Marcus Rodriguez",
+      "company": "Craft Coffee Co.",
+      "role": "Founder",
+      "quote": "Natalia transformed our boutique coffee brand with a website that perfectly balances aesthetics and functionality. The results speak for themselves."
+    },
+    "testimonial3": {
+      "name": "Emily Watson",
+      "company": "Studio Minimal",
+      "role": "Creative Director",
+      "quote": "The collaborative process was amazing. Natalia brought lots of fresh perspectives and innovative solutions to our project."
+    }
   },
   "faqs": {
     "heading": "FAQs",
