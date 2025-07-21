@@ -1,31 +1,43 @@
-# Node.js and npm ignore
+# Dependencies
 node_modules/
-package-lock.json
 
-# Next.js ignore
+# Next.js build output
 .next/
+out/
 dist/
 
-# TypeScript ignore
-tsconfig.json
-type-check/
-lib/
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# React ignore
-build/
-# public/
+# Vercel
+.vercel
 
-# Tailwind CSS ignore
-tailwind.config.js
-postcss.config.js
+# TypeScript build info
+*.tsbuildinfo
+next-env.d.ts
 
-# Qodo ignore
+# Testing
+coverage/
+
+# IDE and OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.vscode/
+.idea/
+
+# Qodo
 .qodo/
 
-# General ignore
-.DS_Store
-.vscode/
-.env
-.idea/
-coverage/
-.qodo
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
