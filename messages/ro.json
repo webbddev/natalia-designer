@@ -24,34 +24,26 @@
     "heading": "Lucrări selectate",
     "imageAlt": "Imagine proiect {name}"
   },
+  "gallery": {
+    "title": "Galeria Proiectelor"
+  },
   "common": {
     "client": "Client",
-    "year": "An",
-    "services": "Servicii",
-    "technologies": "Tehnologii",
-    "challenge": "Provocare",
-    "solution": "Soluție",
-    "backToProjects": "Înapoi la toate proiectele"
+    "challenge-and-solution": "Provocare și soluție",
+    "backToProjects": "ÎNAPOI LA PROECTELE"
   },
   "projectDetail": {
-    "backToProjects": "Înapoi la toate proiectele",
-    "artisan-brew-co": {
-      "name": "Artisan Brew Co.",
-      "description": "Un site modern pentru o fabrică de bere artizanală, care prezintă catalogul de produse și povestea brandului.",
-      "client": "Artisan Brew Co.",
-      "services": ["Design Web", "Dezvoltare", "Branding"],
-      "technologies": ["React", "Next.js", "Tailwind CSS"],
-      "challenge": "Clientul avea nevoie de un site web care să reflecte abordarea lor artizanală, oferind în același timp o experiență de cumpărături fluidă.",
-      "solution": "Am creat un design personalizat care accentuează măiestria produselor lor, cu un flux de comerț electronic intuitiv."
+    "residential-harmony": {
+      "name": "Confort Elegant pentru Doi",
+      "description": "O combinație armonioasă de estetică și funcționalitate în interiorul pentru un cuplu. Tonurile pastelate discrete, dominante, creează o atmosferă relaxantă, amplificată de decorul cu elemente din materiale naturale. Balconul este transformat într-un colț de natură, iar zonificarea bine gândită include un impresionant dulap de vin ca parte a spațiului de locuit.",
+      "client": "Un cuplu inspirat de estetica scandinavă, care dorește să creeze o casă plină de căldură și naturalețe.",
+      "challenge-and-solution": "Principala provocare a proiectului a fost crearea unui spațiu confortabil și funcțional, care să corespundă dorințelor cuplului. Designerul a trebuit să integreze tonuri pastelate discrete în conceptul general al interiorului și să creeze o zonă de relaxare cu decor natural pe balcon. În plus, era necesar să se prevadă un loc pentru depozitarea vinului la domiciliu. Soluția a fost găsită în utilizarea texturilor din materiale naturale, care au completat nuanțele discrete ale interiorului. Decorul natural de pe balcon a devenit o extensie firească a ideii generale de confort, iar dulapul de vin a fost integrat în design astfel încât să devină nu doar un element funcțional, ci și decorativ."
     },
     "wavelength-studios": {
       "name": "Wavelength Studios",
       "description": "Un site de portofoliu pentru un studio de design de sunet, care își prezintă lucrările și serviciile.",
       "client": "Wavelength Studios",
-      "services": ["Design Web", "Dezvoltare", "Design UX"],
-      "technologies": ["React", "Next.js", "Framer Motion"],
-      "challenge": "Crearea unei experiențe interactive care să reprezinte vizual munca audio.",
-      "solution": "Am implementat vizualizări audio și elemente interactive care răspund la mostrele de sunet."
+      "challenge-and-solution": "Clientul dorește să prezinte lucrările sale de design de sunet într-un mod vizual atractiv și interactiv."
     },
     "nova-fitness": {
       "name": "Nova Fitness",

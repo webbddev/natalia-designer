@@ -69,6 +69,7 @@
 //   );
 // }
 
+
 // app/[locale]/projects/[slug]/page.tsx
 // app/[locale]/projects/[slug]/page.tsx
 import { notFound } from "next/navigation";
@@ -93,42 +94,27 @@ export default async function ProjectDetailPage({ params }: Props) {
   const commonT = await getTranslations({ locale, namespace: "common" });
 
   return (
-    <main className="container pt-24 pb-16 min-h-screen overflow-auto">
+    <main className="container pt-24 pb-16 px-1 md:px-10 min-h-screen overflow-auto">
       <h1 className="text-4xl md:text-6xl font-bold mb-6">
         {t(`${slug}.name`)}
       </h1>
-      <div className="mb-8 text-xl text-stone-700">
+      <div className="mb-8 text-xl md:text-2xl text-stone-700">
         {t(`${slug}.description`)}
       </div>
 
-      {/* Meta */}
-      <div className="mb-8 text-lg text-stone-800 space-y-1">
-        <div>
-          <span className="font-semibold pr-1">{commonT("client")}:</span>
-          <span>{t(`${slug}.client`)}</span>
-        </div>
-        <div>
-          <span className="font-semibold pr-1">{commonT("year")}:</span>
-          <span>{project.year}</span>
-        </div>
-        <div>
-          <span className="font-semibold pr-1">{commonT("services")}:</span>
-          <span>{project.services?.join(", ") || ""}</span>
-        </div>
-        <div>
-          <span className="font-semibold pr-1">{commonT("technologies")}:</span>
-          <span>{project.technologies?.join(", ") || ""}</span>
-        </div>
+      {/* Client section */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-semibold mb-2">
+          {commonT("client")}
+        </h2>
+        <p className="text-xl">{t(`${slug}.client`)}</p>
       </div>
 
       <div className="mb-8">
-        <h2 className="text-2xl font-semibold mb-2">{commonT("challenge")}</h2>
-        <p className="text-lg">{t(`${slug}.challenge`)}</p>
-      </div>
-
-      <div className="mb-8">
-        <h2 className="text-2xl font-semibold mb-2">{commonT("solution")}</h2>
-        <p className="text-lg">{t(`${slug}.solution`)}</p>
+        <h2 className="text-2xl font-semibold mb-2">
+          {commonT("challenge-and-solution")}
+        </h2>
+        <p className="text-xl">{t(`${slug}.challenge-and-solution`)}</p>
       </div>
 
       {project.gallery && <ProjectGallery gallery={project.gallery} />}

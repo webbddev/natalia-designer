@@ -24,34 +24,26 @@
     "heading": "Selected Works",
     "imageAlt": "{name} project image"
   },
+  "gallery": {
+    "title": "Project Gallery"
+  },
   "common": {
     "client": "Client",
-    "year": "Year",
-    "services": "Services",
-    "technologies": "Technologies",
-    "challenge": "Challenge",
-    "solution": "Solution",
-    "backToProjects": "Back to All Projects"
+    "challenge-and-solution": "Challenge and Solution",
+    "backToProjects": "BACK TO PROJECTS"
   },
   "projectDetail": {
-    "backToProjects": "Back to All Projects",
-    "artisan-brew-co": {
-      "name": "Artisan Brew Co.",
-      "description": "A modern website for a craft brewery featuring their product catalog and brand story.",
-      "client": "Artisan Brew Co.",
-      "services": ["Web Design", "Development", "Branding"],
-      "technologies": ["React", "Next.js", "Tailwind CSS"],
-      "challenge": "The client needed a website that reflected their artisanal approach while providing a seamless shopping experience.",
-      "solution": "I created a custom design that emphasizes the craftsmanship of their products with an intuitive e-commerce flow."
+    "residential-harmony": {
+      "name": "Elegant Comfort for Two",
+      "description": "A harmonious blend of aesthetics and functionality in an interior designed for a couple. Dominant muted pastel tones create a relaxing atmosphere, enhanced by decor featuring natural elements. The balcony is transformed into a natural corner, and the thoughtfully planned zoning includes a striking wine cabinet as part of the living space.",
+      "client": "A couple inspired by Scandinavian aesthetics, seeking to create a home filled with warmth and naturalness.",
+      "challenge-and-solution": "The main challenge of the project was to create a cozy and functional space that met the couple's wishes. The designer needed to integrate muted pastel tones into the overall interior concept and create a relaxation area with natural decor on the balcony. Furthermore, it was necessary to provide a place for wine storage within the home. The solution was found in using textures of natural materials, which complemented the subdued shades of the interior. The natural decor on the balcony became a natural extension of the overall idea of comfort, and the wine cabinet was integrated into the design in such a way that it became not only a functional but also a decorative element."
     },
     "wavelength-studios": {
       "name": "Wavelength Studios",
       "description": "A portfolio site for a sound design studio showcasing their work and services.",
       "client": "Wavelength Studios",
-      "services": ["Web Design", "Development", "UX Design"],
-      "technologies": ["React", "Next.js", "Framer Motion"],
-      "challenge": "Creating an interactive experience that represents audio work visually.",
-      "solution": "Implemented audio visualizations and interactive elements that respond to sound samples."
+      "challenge-and-solution": "The client wanted a site that would showcase their work in an engaging and interactive way."
     },
     "nova-fitness": {
       "name": "Nova Fitness",

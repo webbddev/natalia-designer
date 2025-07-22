@@ -12,7 +12,7 @@ import {
 export default function Home() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Hero />
       <Intro />
       <Projects />
