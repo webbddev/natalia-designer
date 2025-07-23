@@ -23,9 +23,6 @@ import "react-photo-album/rows.css";
 
 type GalleryProps = {
   gallery: {
-    title: string;
-    btnText: string;
-    btnIcon: string;
     images: {
       src: any;
       original: any;
@@ -101,7 +98,7 @@ const ProjectGallery = ({ gallery }: GalleryProps) => {
   // Use translations
   const t = useTranslations("gallery");
 
-  const { btnText, btnIcon, images } = gallery;
+  const { images } = gallery;
 
   const photos = images.map(({ src, original, width, height }, index) => ({
     key:

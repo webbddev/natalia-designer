@@ -39,11 +39,11 @@
       "client": "A couple inspired by Scandinavian aesthetics, seeking to create a home filled with warmth and naturalness.",
       "challenge-and-solution": "The main challenge of the project was to create a cozy and functional space that met the couple's wishes. The designer needed to integrate muted pastel tones into the overall interior concept and create a relaxation area with natural decor on the balcony. Furthermore, it was necessary to provide a place for wine storage within the home. The solution was found in using textures of natural materials, which complemented the subdued shades of the interior. The natural decor on the balcony became a natural extension of the overall idea of comfort, and the wine cabinet was integrated into the design in such a way that it became not only a functional but also a decorative element."
     },
-    "wavelength-studios": {
-      "name": "Wavelength Studios",
-      "description": "A portfolio site for a sound design studio showcasing their work and services.",
-      "client": "Wavelength Studios",
-      "challenge-and-solution": "The client wanted a site that would showcase their work in an engaging and interactive way."
+    "urban-student-oasis": {
+      "name": "Urban Oasis for the Active Student",
+      "description": "A stylish sanctuary for the dynamic student, embodied in elegant minimalism. The space, visually expanded by a light palette and natural wood accents, creates a harmonious living environment. On-trend details, including a wine corner and a wardrobe with tinted glass doors, emphasize the interior's individuality.",
+      "client": "A student aspiring to a stylish and elegant lifestyle.",
+      "challenge-and-solution": "The key challenge was creating a cozy and 'living' space within the framework of strict, white-palette minimalism. The solution was found in contrast: the warmth of natural wood and decor with textured elements softened the cool-toned base. In the bedroom, muted pastel tones set a calm atmosphere, while the main highlight became the wardrobe with tinted glass doors – both functional and visually light. The client's wish for an in-home wine cabinet was elegantly integrated into the overall concept."
     },
     "nova-fitness": {
       "name": "Nova Fitness",
@@ -53,24 +53,6 @@
       "technologies": ["Next.js", "Tailwind CSS", "Framer Motion"],
       "challenge": "Differentiate the studio in a saturated fitness market.",
       "solution": "High-impact visuals and a conversion-focused booking flow."
-    },
-    "urban-plates": {
-      "name": "Urban Plates",
-      "description": "An online menu & ordering system for a modern fast-casual restaurant.",
-      "client": "Urban Plates",
-      "services": ["UX/UI", "Development"],
-      "technologies": ["React", "Stripe", "Next.js"],
-      "challenge": "Integrate real-time kitchen tickets and third-party delivery.",
-      "solution": "Custom Node middleware synchronising POS and web orders."
-    },
-    "bloom-botanicals": {
-      "name": "Bloom Botanicals",
-      "description": "E-commerce for a natural skincare brand.",
-      "client": "Bloom Botanicals",
-      "services": ["Branding", "E-commerce", "Photography"],
-      "technologies": ["Shopify", "Liquid", "Figma"],
-      "challenge": "Translate an offline boutique feel into an online store.",
-      "solution": "Warm colour palette, micro-animations and scent-based filtering."
     }
   },
   "testimonials": {
