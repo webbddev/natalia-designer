@@ -39,38 +39,17 @@
       "client": "Un cuplu inspirat de estetica scandinavă, care dorește să creeze o casă plină de căldură și naturalețe.",
       "challenge-and-solution": "Principala provocare a proiectului a fost crearea unui spațiu confortabil și funcțional, care să corespundă dorințelor cuplului. Designerul a trebuit să integreze tonuri pastelate discrete în conceptul general al interiorului și să creeze o zonă de relaxare cu decor natural pe balcon. În plus, era necesar să se prevadă un loc pentru depozitarea vinului la domiciliu. Soluția a fost găsită în utilizarea texturilor din materiale naturale, care au completat nuanțele discrete ale interiorului. Decorul natural de pe balcon a devenit o extensie firească a ideii generale de confort, iar dulapul de vin a fost integrat în design astfel încât să devină nu doar un element funcțional, ci și decorativ."
     },
-    "urban-student-oasis": {
+    "city-student-oasis": {
       "name": "Oază Urbană pentru Studentul Activ",
-      "description": "Un sanctuar stilat pentru studentul dinamic, întruchipat într-un minimalism elegant. Spațiul, extins vizual printr-o paletă de culori deschise și accente din lemn natural, creează un mediu de viață armonios. Detaliile de trend, inclusiv un colț de vinuri și un dulap cu uși din sticlă fumurie, subliniază individualitatea interiorului.",
-      "client": "Un student care aspiră la un stil de viață stilat și elegant.",
-      "challenge-and-solution": "Provocarea cheie a fost crearea unui spațiu confortabil și 'viu' în cadrul unui minimalism strict, cu o paletă albă. Soluția a fost găsită în contrast: căldura lemnului natural și decorul cu elemente texturate au temperat baza rece. În dormitor, tonurile pastelate discrete au creat o atmosferă calmă, iar piesa de rezistență a devenit dulapul cu uși din sticlă fumurie – funcțional și ușor vizual. Dorința clientului de a avea un răcitor de vinuri acasă a fost integrată cu eleganță în conceptul general."
+      "description": "Acesta nu este doar un apartament; este un hub elegant pentru un student energic, conceput într-un minimalism rafinat. Spațiul este extins vizual printr-o paletă de culori deschise și accente de lemn natural, creând o armonie perfectă pentru locuit și studiu. Detaliile moderne, cum ar fi un colț sofisticat pentru vin și un frigider, precum și un dulap cu sticlă fumurie, subliniază caracterul unic al interiorului.",
+      "client": "Un student care prețuiește stilul, confortul și un mod de viață modern.",
+      "challenge-and-solution": "Principala provocare a fost crearea unui spațiu confortabil și 'viu' în cadrul unui minimalism strict, cu o schemă de culori predominant albă. Am găsit o soluție în contraste: căldura lemnului natural și diversele texturi din decor au atenuat baza rece. În dormitor, tonurile pastelate discrete au creat o atmosferă calmă, iar punctul culminant a fost un dulap cu uși din sticlă fumurie, care nu este doar funcțional, ci și vizual ușor. O cerință specială a clientului a fost includerea unui dulap de vin și a unui frigider, pe care le-am integrat elegant în conceptul general, transformându-le în accente stilate ale interiorului."
     },
-    "nova-fitness": {
-      "name": "Nova Fitness",
-      "description": "O pagină de destinație (landing page) îndrăzneață pentru un studio de fitness de tip boutique.",
-      "client": "Nova Fitness",
-      "services": ["Design Web", "Dezvoltare"],
-      "technologies": ["Next.js", "Tailwind CSS", "Framer Motion"],
-      "challenge": "Diferențierea studioului pe o piață de fitness saturată.",
-      "solution": "Elemente vizuale de mare impact și un flux de rezervări axat pe conversie."
-    },
-    "urban-plates": {
-      "name": "Urban Plates",
-      "description": "Un meniu online și sistem de comenzi pentru un restaurant modern de tip fast-casual.",
-      "client": "Urban Plates",
-      "services": ["UX/UI", "Dezvoltare"],
-      "technologies": ["React", "Stripe", "Next.js"],
-      "challenge": "Integrarea bonurilor de comandă pentru bucătărie în timp real și a livrării prin terți.",
-      "solution": "Middleware Node.js personalizat care sincronizează comenzile de la punctul de vânzare (POS) și cele de pe web."
-    },
-    "bloom-botanicals": {
-      "name": "Bloom Botanicals",
-      "description": "Comerț electronic pentru un brand de produse naturale de îngrijire a pielii.",
-      "client": "Bloom Botanicals",
-      "services": ["Branding", "Comerț electronic", "Fotografie"],
-      "technologies": ["Shopify", "Liquid", "Figma"],
-      "challenge": "Transpunerea sentimentului unui butic fizic într-un magazin online.",
-      "solution": "O paletă de culori calde, micro-animații și filtrare bazată pe arome."
+    "family-house": {
+      "name": "Family House",
+      "description": "",
+      "client": "",
+      "challenge-and-solution": ""
     }
   },
   "testimonials": {

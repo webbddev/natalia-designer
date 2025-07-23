@@ -129,7 +129,7 @@ const ProjectGallery = ({ gallery }: GalleryProps) => {
           variants={fadeIn("up")}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="text-3xl md:text-4xl lg:text-5xl mb-8 lg:mb-12 font-bold"
         >
           {t("title")}
@@ -140,7 +140,7 @@ const ProjectGallery = ({ gallery }: GalleryProps) => {
         variants={fadeIn("up")}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }}
         className="mb-8 lg:mb-12"
       >
         <RowsPhotoAlbum

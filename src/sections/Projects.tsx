@@ -15,7 +15,7 @@ const Projects = () => {
         <h2 className="text-4xl md:text-7xl lg:text-8xl">{t("projects.heading")}</h2>
         {/* Projects */}
         <div className="mt-10 md:mt-16 lg:mt-20">
-          {projectsData.map(({ name, thumbnail, slug }) => (
+          {projectsData.map(({  thumbnail, slug }) => (
             <Link
               locale={locale}
               href={`/projects/${slug}`} 

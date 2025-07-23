@@ -39,20 +39,17 @@
       "client": "A couple inspired by Scandinavian aesthetics, seeking to create a home filled with warmth and naturalness.",
       "challenge-and-solution": "The main challenge of the project was to create a cozy and functional space that met the couple's wishes. The designer needed to integrate muted pastel tones into the overall interior concept and create a relaxation area with natural decor on the balcony. Furthermore, it was necessary to provide a place for wine storage within the home. The solution was found in using textures of natural materials, which complemented the subdued shades of the interior. The natural decor on the balcony became a natural extension of the overall idea of comfort, and the wine cabinet was integrated into the design in such a way that it became not only a functional but also a decorative element."
     },
-    "urban-student-oasis": {
-      "name": "Urban Oasis for the Active Student",
-      "description": "A stylish sanctuary for the dynamic student, embodied in elegant minimalism. The space, visually expanded by a light palette and natural wood accents, creates a harmonious living environment. On-trend details, including a wine corner and a wardrobe with tinted glass doors, emphasize the interior's individuality.",
-      "client": "A student aspiring to a stylish and elegant lifestyle.",
-      "challenge-and-solution": "The key challenge was creating a cozy and 'living' space within the framework of strict, white-palette minimalism. The solution was found in contrast: the warmth of natural wood and decor with textured elements softened the cool-toned base. In the bedroom, muted pastel tones set a calm atmosphere, while the main highlight became the wardrobe with tinted glass doors – both functional and visually light. The client's wish for an in-home wine cabinet was elegantly integrated into the overall concept."
+    "city-student-oasis": {
+      "name": "City Oasis for the Active Student",
+      "description": "This isn't just an apartment; it's a stylish hub for an energetic student, designed with elegant minimalism. The space is visually expanded by a light color palette and natural wood accents, creating a perfect harmony for living and studying. Trendy details, such as a sophisticated wine corner and a refrigerator, as well as a tinted glass cabinet, highlight the unique character of the interior.",
+      "client": "A student who values style, comfort, and a modern lifestyle.",
+      "challenge-and-solution": "The main challenge was to create a cozy and 'lively' space within strict minimalism and a predominantly white color scheme. We found a solution in contrasts: the warmth of natural wood and various textures in the decor softened the cool base. In the bedroom, muted pastel tones created a calm atmosphere, and the highlight was a cabinet with tinted glass doors, which is not only functional but also visually light. A special request from the client was the inclusion of a wine cabinet and a refrigerator, which we elegantly integrated into the overall concept, transforming them into stylish interior accents."
     },
-    "nova-fitness": {
-      "name": "Nova Fitness",
-      "description": "A bold landing page for a boutique fitness studio.",
-      "client": "Nova Fitness",
-      "services": ["Web Design", "Development"],
-      "technologies": ["Next.js", "Tailwind CSS", "Framer Motion"],
-      "challenge": "Differentiate the studio in a saturated fitness market.",
-      "solution": "High-impact visuals and a conversion-focused booking flow."
+    "family-house": {
+      "name": "Family House",
+      "description": "",
+      "client": "",
+      "challenge-and-solution": ""
     }
   },
   "testimonials": {
