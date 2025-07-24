@@ -1,4 +1,3 @@
-
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import { HTMLAttributes, useEffect } from "react";
@@ -11,22 +10,11 @@ type TestimonialProps = {
   name: string;
   role: string;
   company: string;
-  imagePositionY: number;
-  image: string | StaticImport;
   className?: string;
 } & HTMLAttributes<HTMLDivElement>;
 
 const Testimonial = (props: TestimonialProps) => {
-  const {
-    quote,
-    name,
-    role,
-    company,
-    imagePositionY,
-    image,
-    className,
-    ...rest
-  } = props;
+  const { quote, name, role, company, className, ...rest } = props;
 
   // custom animation hook
   const {
@@ -75,12 +63,6 @@ const Testimonial = (props: TestimonialProps) => {
           animate={{ width: 0 }}
           exit={{ width: "100%" }}
           transition={{ duration: 0.5 }}
-        />
-        <Image
-          src={image}
-          alt={`${name} image`}
-          className="size-full object-cover"
-          style={{ objectPosition: `50% ${imagePositionY * 100}%` }}
         />
       </div>
       <blockquote className="md:col-span-3 ">

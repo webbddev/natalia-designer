@@ -1,43 +1,12 @@
 "use client";
 
-import { FC, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import image1 from "@/assets/images/testimonial-1.jpg";
 import image2 from "@/assets/images/testimonial-2.jpg";
 import image3 from "@/assets/images/testimonial-3.jpg";
 import { useScroll, motion, useTransform, AnimatePresence } from "motion/react";
 import { useTranslations } from "next-intl";
 import Testimonial from "@/components/Testimonial";
-
-/* eslint-disable-next-line @typescript-eslint/no-unused-vars */
-// const testimonials = [
-//   {
-//     name: "Sarah Chen",
-//     company: "Pixel Perfect",
-//     role: "Head of Design",
-//     quote:
-//       "Alex's expertise in both technical development and design created a beautiful, high-performing website.",
-//     image: image1,
-//     imagePositionY: 0.2,
-//   },
-//   {
-//     name: "Marcus Rodriguez",
-//     company: "Craft Coffee Co.",
-//     role: "Founder",
-//     quote:
-//       "Alex transformed our boutique coffee brand with a website that perfectly balances aesthetics and functionality.",
-//     image: image2,
-//     imagePositionY: 0.1,
-//   },
-//   {
-//     name: "Emily Watson",
-//     company: "Studio Minimal",
-//     role: "Creative Director",
-//     quote:
-//       "The collaborative process was amazing. Alex brought lots of fresh perspectives and innovative solutions.",
-//     image: image3,
-//     imagePositionY: 0.55,
-//   },
-// ];
 
 const Testimonials = () => {
   const t = useTranslations("testimonials");
@@ -49,6 +18,28 @@ const Testimonials = () => {
 
   const transformTop = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
   const transformBottom = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
+
+  // Create testimonials array from translation data
+  const testimonials = [
+    {
+      name: t("testimonial1.name"),
+      company: t("testimonial1.company"),
+      role: t("testimonial1.role"),
+      quote: t("testimonial1.quote"),
+    },
+    {
+      name: t("testimonial2.name"),
+      company: t("testimonial2.company"),
+      role: t("testimonial2.role"),
+      quote: t("testimonial2.quote"),
+    },
+    {
+      name: t("testimonial3.name"),
+      company: t("testimonial3.company"),
+      role: t("testimonial3.role"),
+      quote: t("testimonial3.quote"),
+    },
+  ];
 
   const [testimonialIndex, setTestimonialIndex] = useState(0);
 
@@ -87,7 +78,7 @@ const Testimonials = () => {
         <div className="mt-20 ">
           <AnimatePresence mode="wait" initial={false}>
             {testimonials.map(
-              ({ name, company, role, quote, image, imagePositionY }, index) =>
+              ({ name, company, role, quote }, index) =>
                 index === testimonialIndex && (
                   <Testimonial
                     key={name}
@@ -95,8 +86,6 @@ const Testimonials = () => {
                     company={company}
                     role={role}
                     quote={quote}
-                    image={image}
-                    imagePositionY={imagePositionY}
                   />
                 )
             )}
