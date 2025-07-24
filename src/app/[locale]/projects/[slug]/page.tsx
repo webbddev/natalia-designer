@@ -98,23 +98,25 @@ export default async function ProjectDetailPage({ params }: Props) {
       <h1 className="text-4xl md:text-6xl font-bold mb-6">
         {t(`${slug}.name`)}
       </h1>
-      <div className="mb-8 text-xl md:text-2xl text-stone-700">
+      <div className="mb-8 text-xl md:text-2xl text-stone-700 font-light lg:tracking-wide">
         {t(`${slug}.description`)}
       </div>
 
       {/* Client section */}
       <div className="mb-8">
-        <h2 className="text-2xl font-semibold mb-2">
-          {commonT("client")}
-        </h2>
-        <p className="text-xl">{t(`${slug}.client`)}</p>
+        <h2 className="text-2xl font-semibold mb-2">{commonT("client")}</h2>
+        <p className="text-xl lg:text-[22px] font-light lg:tracking-[0.5px]">
+          {t(`${slug}.client`)}
+        </p>
       </div>
 
       <div className="mb-8">
         <h2 className="text-2xl font-semibold mb-2">
           {commonT("challenge-and-solution")}
         </h2>
-        <p className="text-xl">{t(`${slug}.challenge-and-solution`)}</p>
+        <p className="text-xl lg:text-[22px] font-light lg:tracking-[0.5px]">
+          {t(`${slug}.challenge-and-solution`)}
+        </p>
       </div>
 
       {project.gallery && <ProjectGallery gallery={project.gallery} />}
