@@ -96,7 +96,7 @@ const Testimonial = (props: TestimonialProps) => {
           className="mt-4 md:mt-8 not-italic block md:text-lg lg:text-xl"
           ref={citeScope}
         >
-          {name}, {role} at {company}
+          {name}, {role} {company}
         </cite>
       </blockquote>
     </div>
