@@ -56,9 +56,10 @@
     "heading": "Câteva cuvinte frumoase de la clienții mei anteriori",
     "prevButton": "Testimonial anterior",
     "nextButton": "Testimonial următor",
+    "at": "la",
     "testimonial1": {
       "name": "Sarah Chen",
-      "company": "Pixel Perfect",
+      "company": "",
       "role": "Șef de Design",
       "quote": "Expertiza Nataliei atât în dezvoltarea tehnică, cât și în design a creat un site web frumos și performant care ne-a depășit așteptările."
     },

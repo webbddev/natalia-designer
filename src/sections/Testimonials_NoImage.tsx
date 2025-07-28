@@ -3,7 +3,7 @@
 import { FC, useRef, useState } from "react";
 import { useScroll, motion, useTransform, AnimatePresence } from "motion/react";
 import { useTranslations } from "next-intl";
-import TestimonialSingle_NoImage from "@/components/TestimonialSingle_NoImage";
+import SingleTestimonial_NoImage from "../components/SingleTestimonial_NoImage";
 
 // Testimonials section with no images
 const Testimonials_NoImage = () => {
@@ -78,7 +78,7 @@ const Testimonials_NoImage = () => {
             {testimonials.map(
               ({ name, company, role, quote }, index) =>
                 index === testimonialIndex && (
-                  <TestimonialSingle_NoImage
+                  <SingleTestimonial_NoImage
                     key={name}
                     name={name}
                     company={company}

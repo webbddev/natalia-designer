@@ -4,8 +4,9 @@ import { HTMLAttributes, useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 import { usePresence, motion } from "motion/react";
 import useTextRevealAnimation from "@/hooks/useTextRevealAnimation";
+import { useTranslations } from "next-intl";
 
-type TestimonialSingle_NoImage = {
+type SingleTestimonial_NoImage = {
   quote: string;
   name: string;
   role: string;
@@ -13,8 +14,9 @@ type TestimonialSingle_NoImage = {
   className?: string;
 } & HTMLAttributes<HTMLDivElement>;
 
-const TestimonialSingle_NoImage = (props: TestimonialSingle_NoImage) => {
+const SingleTestimonial_NoImage = (props: SingleTestimonial_NoImage) => {
   const { quote, name, role, company, className, ...rest } = props;
+  const t = useTranslations("testimonials");
 
   // custom animation hook
   const {
@@ -48,9 +50,20 @@ const TestimonialSingle_NoImage = (props: TestimonialSingle_NoImage) => {
     citeExitAnimation,
   ]);
 
+  // Format the citation text conditionally
+  const formatCitation = () => {
+    if (company && company.trim() !== "") {
+      return `${name}, ${role} ${t("at")} ${company}`;
+    }
+    return `${name}, ${role}`;
+  };
+
   return (
     <div
-      className={twMerge("flex flex-col max-w-4xl lg:max-w-7xl mx-auto", className)}
+      className={twMerge(
+        "flex flex-col max-w-4xl lg:max-w-7xl mx-auto",
+        className
+      )}
       {...rest}
     >
       <blockquote className="w-full">
@@ -66,12 +79,11 @@ const TestimonialSingle_NoImage = (props: TestimonialSingle_NoImage) => {
           className="mt-8 md:mt-12 not-italic block text-lg md:text-xl lg:text-2xl text-stone-600 text-left"
           ref={citeScope}
         >
-          {name}, {role} at {company}
+          {formatCitation()}
         </cite>
       </blockquote>
     </div>
   );
 };
 
-
-export default TestimonialSingle_NoImage;
+export default SingleTestimonial_NoImage;

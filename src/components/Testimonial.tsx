@@ -1,21 +1,21 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import Image from "next/image";
 import { HTMLAttributes, useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 import { usePresence, motion } from "motion/react";
+import { useTranslations } from "next-intl";
 import useTextRevealAnimation from "@/hooks/useTextRevealAnimation";
 
 type TestimonialProps = {
   quote: string;
   name: string;
   role: string;
-  company: string;
+  company?: string;
   className?: string;
 } & HTMLAttributes<HTMLDivElement>;
 
 const Testimonial = (props: TestimonialProps) => {
   const { quote, name, role, company, className, ...rest } = props;
-
+  const t = useTranslations("testimonials"); 
+  
   // custom animation hook
   const {
     scope: quoteScope,
@@ -48,6 +48,14 @@ const Testimonial = (props: TestimonialProps) => {
     citeExitAnimation,
   ]);
 
+  // Format the citation text conditionally
+  const formatCitation = () => {
+    if (company && company.trim() !== "") {
+      return `${name}, ${role} ${t("at")} ${company}`;
+    }
+    return `${name}, ${role}`;
+  };
+
   return (
     <div
       className={twMerge(
@@ -78,7 +86,7 @@ const Testimonial = (props: TestimonialProps) => {
           className="mt-4 md:mt-8 not-italic block md:text-lg lg:text-xl"
           ref={citeScope}
         >
-          {name}, {role} {company}
+          {formatCitation()}
         </cite>
       </blockquote>
     </div>

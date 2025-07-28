@@ -56,9 +56,10 @@
     "heading": "Some nice words from my past clients",
     "prevButton": "Previous testimonial",
     "nextButton": "Next testimonial",
+    "at": "at",
     "testimonial1": {
       "name": "Sarah Chen",
-      "company": "Pixel Perfect",
+      "company": "",
       "role": "Head of Design",
       "quote": "Natalia's expertise in both technical development and design created a beautiful, high-performing website that exceeded our expectations."
     },
